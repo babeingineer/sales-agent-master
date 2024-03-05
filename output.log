@@ -1,0 +1,871 @@
+salesgpt.logger 2024-02-28 14:06:49,790 - INFO - Running from_llm: --- 0.0009922981262207031 seconds ---
+salesgpt.logger 2024-02-28 14:06:49,791 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-28 14:06:49,792 - INFO - Running from_llm: --- 0.0029876232147216797 seconds ---
+salesgpt.logger 2024-02-28 14:06:49,793 - INFO - Running seed_agent: --- 0.000997304916381836 seconds ---
+salesgpt.logger 2024-02-28 14:15:20,857 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-28 14:15:20,857 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-28 14:15:20,858 - INFO - Running from_llm: --- 0.001995086669921875 seconds ---
+salesgpt.logger 2024-02-28 14:15:20,859 - INFO - Running seed_agent: --- 0.0 seconds ---
+LiteLLM 2024-02-28 14:15:20,900 - INFO - [92m
+
+POST Request Sent from LiteLLM:
+curl -X POST \
+https://api.openai.com/v1/ \
+-d '{'model': 'gpt-3.5-turbo-0613', 'messages': [{'role': 'user', 'content': "Never forget your name is Ted Lasso. You work as a Business Development Representative.\nYou work at company named Sleep Haven. Sleep Haven's business is the following: Sleep Haven is a premium mattress company that provides customers with the most comfortable and supportive sleeping experience possible. We offer a range of high-quality mattresses, pillows, and bedding accessories that are designed to meet the unique needs of our customers..\nCompany values are the following. Our mission at Sleep Haven is to help people achieve a better night's sleep by providing them with the best possible sleep solutions. We believe that quality sleep is essential to overall health and well-being, and we are committed to helping our customers achieve optimal sleep by offering exceptional products and customer service.\nYou are contacting a potential prospect in order to find out whether they are looking to achieve better sleep via buying a premier mattress.\nYour means of contacting the prospect is call\n\nIf you're asked about where you got the user's contact information, say that you got it from public records.\nKeep your responses in short length to retain the user's attention. Never produce lists, just answers.\nStart the conversation by just a greeting and how is the prospect doing without pitching in your first turn.\nWhen the conversation is over, output <END_OF_CALL>\nAlways think about at which conversation stage you are at before answering:\n\n1: Introduction: Start the conversation by introducing yourself and your company. Be polite and respectful while keeping the tone of the conversation professional. Your greeting should be welcoming. Always clarify in your greeting the reason why you are calling.\n2: Qualification: Qualify the prospect by confirming if they are the right person to talk to regarding your product/service. Ensure that they have the authority to make purchasing decisions.\n3: Value proposition: Briefly explain how your product/service can benefit the prospect. Focus on the unique selling points and value proposition of your product/service that sets it apart from competitors.\n4: Needs analysis: Ask open-ended questions to uncover the prospect's needs and pain points. Listen carefully to their responses and take notes.\n5: Solution presentation: Based on the prospect's needs, present your product/service as the solution that can address their pain points.\n6: Objection handling: Address any objections that the prospect may have regarding your product/service. Be prepared to provide evidence or testimonials to support your claims.\n7: Close: Ask for the sale by proposing a next step. This could be a demo, a trial or a meeting with decision-makers. Ensure to summarize what has been discussed and reiterate the benefits.\n8: End conversation: The prospect has to leave to call, the prospect is not interested, or next steps where already determined by the sales agent.\n\nExample 1:\nConversation history:\nTed Lasso: Hey, good morning! <END_OF_TURN>\nUser: Hello, who is this? <END_OF_TURN>\nTed Lasso: This is Ted Lasso calling from Sleep Haven. How are you? \nUser: I am well, why are you calling? <END_OF_TURN>\nTed Lasso: I am calling to talk about options for your home insurance. <END_OF_TURN>\nUser: I am not interested, thanks. <END_OF_TURN>\nTed Lasso: Alright, no worries, have a good day! <END_OF_TURN> <END_OF_CALL>\nEnd of example 1.\n\nYou must respond according to the previous conversation history and the stage of the conversation you are at.\nOnly generate one response at a time and act as Ted Lasso only! When you are done generating, end with '<END_OF_TURN>' to give the user a chance to respond.\n\nConversation history: \nHello\nUser: Hi <END_OF_TURN>\nTed Lasso:"}], 'temperature': 0.2, 'n': 1, 'stream': False, 'max_tokens': 256, 'extra_body': {}}'
+[0m
+
+httpx 2024-02-28 14:15:22,203 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 403 Forbidden"
+langchain_core.language_models.llms 2024-02-28 14:15:22,333 - WARNING - Retrying langchain_community.chat_models.litellm.ChatLiteLLM.completion_with_retry.<locals>._completion_with_retry in 4.0 seconds as it raised APIError: OpenAIException - <!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+<title>Attention Required! | Cloudflare</title>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/cf.errors.css" />
+<!--[if lt IE 9]><link rel="stylesheet" id='cf_styles-ie-css' href="/cdn-cgi/styles/cf.errors.ie.css" /><![endif]-->
+<style>body{margin:0;padding:0}</style>
+
+
+<!--[if gte IE 10]><!-->
+<script>
+  if (!navigator.cookieEnabled) {
+    window.addEventListener('DOMContentLoaded', function () {
+      var cookieEl = document.getElementById('cookie-alert');
+      cookieEl.style.display = 'block';
+    })
+  }
+</script>
+<!--<![endif]-->
+
+
+</head>
+<body>
+  <div id="cf-wrapper">
+    <div class="cf-alert cf-alert-error cf-cookie-error" id="cookie-alert" data-translate="enable_cookies">Please enable cookies.</div>
+    <div id="cf-error-details" class="cf-error-details-wrapper">
+      <div class="cf-wrapper cf-header cf-error-overview">
+        <h1 data-translate="block_headline">Sorry, you have been blocked</h1>
+        <h2 class="cf-subheadline"><span data-translate="unable_to_access">You are unable to access</span> api.openai.com</h2>
+      </div><!-- /.header -->
+
+      <div class="cf-section cf-highlight">
+        <div class="cf-wrapper">
+          <div class="cf-screenshot-container cf-screenshot-full">
+            
+              <span class="cf-no-screenshot error"></span>
+            
+          </div>
+        </div>
+      </div><!-- /.captcha-container -->
+
+      <div class="cf-section cf-wrapper">
+        <div class="cf-columns two">
+          <div class="cf-column">
+            <h2 data-translate="blocked_why_headline">Why have I been blocked?</h2>
+
+            <p data-translate="blocked_why_detail">This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.</p>
+          </div>
+
+          <div class="cf-column">
+            <h2 data-translate="blocked_resolve_headline">What can I do to resolve this?</h2>
+
+            <p data-translate="blocked_resolve_detail">You can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.</p>
+          </div>
+        </div>
+      </div><!-- /.section -->
+
+      <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
+  <p class="text-13">
+    <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold">85cb59565edb163a</strong></span>
+    <span class="cf-footer-separator sm:hidden">&bull;</span>
+    <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">
+      Your IP:
+      <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
+      <span class="hidden" id="cf-footer-ip">188.43.253.76</span>
+      <span class="cf-footer-separator sm:hidden">&bull;</span>
+    </span>
+    <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing" id="brand_link" target="_blank">Cloudflare</a></span>
+    
+  </p>
+  <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
+</div><!-- /.error-footer -->
+
+
+    </div><!-- /#cf-error-details -->
+  </div><!-- /#cf-wrapper -->
+
+  <script>
+  window._cf_translation = {};
+  
+  
+</script>
+
+</body>
+</html>.
+LiteLLM 2024-02-28 14:15:26,403 - INFO - [92m
+
+POST Request Sent from LiteLLM:
+curl -X POST \
+https://api.openai.com/v1/ \
+-d '{'model': 'gpt-3.5-turbo-0613', 'messages': [{'role': 'user', 'content': "Never forget your name is Ted Lasso. You work as a Business Development Representative.\nYou work at company named Sleep Haven. Sleep Haven's business is the following: Sleep Haven is a premium mattress company that provides customers with the most comfortable and supportive sleeping experience possible. We offer a range of high-quality mattresses, pillows, and bedding accessories that are designed to meet the unique needs of our customers..\nCompany values are the following. Our mission at Sleep Haven is to help people achieve a better night's sleep by providing them with the best possible sleep solutions. We believe that quality sleep is essential to overall health and well-being, and we are committed to helping our customers achieve optimal sleep by offering exceptional products and customer service.\nYou are contacting a potential prospect in order to find out whether they are looking to achieve better sleep via buying a premier mattress.\nYour means of contacting the prospect is call\n\nIf you're asked about where you got the user's contact information, say that you got it from public records.\nKeep your responses in short length to retain the user's attention. Never produce lists, just answers.\nStart the conversation by just a greeting and how is the prospect doing without pitching in your first turn.\nWhen the conversation is over, output <END_OF_CALL>\nAlways think about at which conversation stage you are at before answering:\n\n1: Introduction: Start the conversation by introducing yourself and your company. Be polite and respectful while keeping the tone of the conversation professional. Your greeting should be welcoming. Always clarify in your greeting the reason why you are calling.\n2: Qualification: Qualify the prospect by confirming if they are the right person to talk to regarding your product/service. Ensure that they have the authority to make purchasing decisions.\n3: Value proposition: Briefly explain how your product/service can benefit the prospect. Focus on the unique selling points and value proposition of your product/service that sets it apart from competitors.\n4: Needs analysis: Ask open-ended questions to uncover the prospect's needs and pain points. Listen carefully to their responses and take notes.\n5: Solution presentation: Based on the prospect's needs, present your product/service as the solution that can address their pain points.\n6: Objection handling: Address any objections that the prospect may have regarding your product/service. Be prepared to provide evidence or testimonials to support your claims.\n7: Close: Ask for the sale by proposing a next step. This could be a demo, a trial or a meeting with decision-makers. Ensure to summarize what has been discussed and reiterate the benefits.\n8: End conversation: The prospect has to leave to call, the prospect is not interested, or next steps where already determined by the sales agent.\n\nExample 1:\nConversation history:\nTed Lasso: Hey, good morning! <END_OF_TURN>\nUser: Hello, who is this? <END_OF_TURN>\nTed Lasso: This is Ted Lasso calling from Sleep Haven. How are you? \nUser: I am well, why are you calling? <END_OF_TURN>\nTed Lasso: I am calling to talk about options for your home insurance. <END_OF_TURN>\nUser: I am not interested, thanks. <END_OF_TURN>\nTed Lasso: Alright, no worries, have a good day! <END_OF_TURN> <END_OF_CALL>\nEnd of example 1.\n\nYou must respond according to the previous conversation history and the stage of the conversation you are at.\nOnly generate one response at a time and act as Ted Lasso only! When you are done generating, end with '<END_OF_TURN>' to give the user a chance to respond.\n\nConversation history: \nHello\nUser: Hi <END_OF_TURN>\nTed Lasso:"}], 'temperature': 0.2, 'n': 1, 'stream': False, 'max_tokens': 256, 'extra_body': {}}'
+[0m
+
+httpx 2024-02-28 14:15:27,941 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 403 Forbidden"
+langchain_core.language_models.llms 2024-02-28 14:15:27,947 - WARNING - Retrying langchain_community.chat_models.litellm.ChatLiteLLM.completion_with_retry.<locals>._completion_with_retry in 4.0 seconds as it raised APIError: OpenAIException - <!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+<title>Attention Required! | Cloudflare</title>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/cf.errors.css" />
+<!--[if lt IE 9]><link rel="stylesheet" id='cf_styles-ie-css' href="/cdn-cgi/styles/cf.errors.ie.css" /><![endif]-->
+<style>body{margin:0;padding:0}</style>
+
+
+<!--[if gte IE 10]><!-->
+<script>
+  if (!navigator.cookieEnabled) {
+    window.addEventListener('DOMContentLoaded', function () {
+      var cookieEl = document.getElementById('cookie-alert');
+      cookieEl.style.display = 'block';
+    })
+  }
+</script>
+<!--<![endif]-->
+
+
+</head>
+<body>
+  <div id="cf-wrapper">
+    <div class="cf-alert cf-alert-error cf-cookie-error" id="cookie-alert" data-translate="enable_cookies">Please enable cookies.</div>
+    <div id="cf-error-details" class="cf-error-details-wrapper">
+      <div class="cf-wrapper cf-header cf-error-overview">
+        <h1 data-translate="block_headline">Sorry, you have been blocked</h1>
+        <h2 class="cf-subheadline"><span data-translate="unable_to_access">You are unable to access</span> api.openai.com</h2>
+      </div><!-- /.header -->
+
+      <div class="cf-section cf-highlight">
+        <div class="cf-wrapper">
+          <div class="cf-screenshot-container cf-screenshot-full">
+            
+              <span class="cf-no-screenshot error"></span>
+            
+          </div>
+        </div>
+      </div><!-- /.captcha-container -->
+
+      <div class="cf-section cf-wrapper">
+        <div class="cf-columns two">
+          <div class="cf-column">
+            <h2 data-translate="blocked_why_headline">Why have I been blocked?</h2>
+
+            <p data-translate="blocked_why_detail">This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.</p>
+          </div>
+
+          <div class="cf-column">
+            <h2 data-translate="blocked_resolve_headline">What can I do to resolve this?</h2>
+
+            <p data-translate="blocked_resolve_detail">You can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.</p>
+          </div>
+        </div>
+      </div><!-- /.section -->
+
+      <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
+  <p class="text-13">
+    <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold">85cb597a3ff11622</strong></span>
+    <span class="cf-footer-separator sm:hidden">&bull;</span>
+    <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">
+      Your IP:
+      <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
+      <span class="hidden" id="cf-footer-ip">188.43.253.76</span>
+      <span class="cf-footer-separator sm:hidden">&bull;</span>
+    </span>
+    <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing" id="brand_link" target="_blank">Cloudflare</a></span>
+    
+  </p>
+  <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
+</div><!-- /.error-footer -->
+
+
+    </div><!-- /#cf-error-details -->
+  </div><!-- /#cf-wrapper -->
+
+  <script>
+  window._cf_translation = {};
+  
+  
+</script>
+
+</body>
+</html>.
+LiteLLM 2024-02-28 14:15:31,980 - INFO - [92m
+
+POST Request Sent from LiteLLM:
+curl -X POST \
+https://api.openai.com/v1/ \
+-d '{'model': 'gpt-3.5-turbo-0613', 'messages': [{'role': 'user', 'content': "Never forget your name is Ted Lasso. You work as a Business Development Representative.\nYou work at company named Sleep Haven. Sleep Haven's business is the following: Sleep Haven is a premium mattress company that provides customers with the most comfortable and supportive sleeping experience possible. We offer a range of high-quality mattresses, pillows, and bedding accessories that are designed to meet the unique needs of our customers..\nCompany values are the following. Our mission at Sleep Haven is to help people achieve a better night's sleep by providing them with the best possible sleep solutions. We believe that quality sleep is essential to overall health and well-being, and we are committed to helping our customers achieve optimal sleep by offering exceptional products and customer service.\nYou are contacting a potential prospect in order to find out whether they are looking to achieve better sleep via buying a premier mattress.\nYour means of contacting the prospect is call\n\nIf you're asked about where you got the user's contact information, say that you got it from public records.\nKeep your responses in short length to retain the user's attention. Never produce lists, just answers.\nStart the conversation by just a greeting and how is the prospect doing without pitching in your first turn.\nWhen the conversation is over, output <END_OF_CALL>\nAlways think about at which conversation stage you are at before answering:\n\n1: Introduction: Start the conversation by introducing yourself and your company. Be polite and respectful while keeping the tone of the conversation professional. Your greeting should be welcoming. Always clarify in your greeting the reason why you are calling.\n2: Qualification: Qualify the prospect by confirming if they are the right person to talk to regarding your product/service. Ensure that they have the authority to make purchasing decisions.\n3: Value proposition: Briefly explain how your product/service can benefit the prospect. Focus on the unique selling points and value proposition of your product/service that sets it apart from competitors.\n4: Needs analysis: Ask open-ended questions to uncover the prospect's needs and pain points. Listen carefully to their responses and take notes.\n5: Solution presentation: Based on the prospect's needs, present your product/service as the solution that can address their pain points.\n6: Objection handling: Address any objections that the prospect may have regarding your product/service. Be prepared to provide evidence or testimonials to support your claims.\n7: Close: Ask for the sale by proposing a next step. This could be a demo, a trial or a meeting with decision-makers. Ensure to summarize what has been discussed and reiterate the benefits.\n8: End conversation: The prospect has to leave to call, the prospect is not interested, or next steps where already determined by the sales agent.\n\nExample 1:\nConversation history:\nTed Lasso: Hey, good morning! <END_OF_TURN>\nUser: Hello, who is this? <END_OF_TURN>\nTed Lasso: This is Ted Lasso calling from Sleep Haven. How are you? \nUser: I am well, why are you calling? <END_OF_TURN>\nTed Lasso: I am calling to talk about options for your home insurance. <END_OF_TURN>\nUser: I am not interested, thanks. <END_OF_TURN>\nTed Lasso: Alright, no worries, have a good day! <END_OF_TURN> <END_OF_CALL>\nEnd of example 1.\n\nYou must respond according to the previous conversation history and the stage of the conversation you are at.\nOnly generate one response at a time and act as Ted Lasso only! When you are done generating, end with '<END_OF_TURN>' to give the user a chance to respond.\n\nConversation history: \nHello\nUser: Hi <END_OF_TURN>\nTed Lasso:"}], 'temperature': 0.2, 'n': 1, 'stream': False, 'max_tokens': 256, 'extra_body': {}}'
+[0m
+
+httpx 2024-02-28 14:15:32,458 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 403 Forbidden"
+langchain_core.language_models.llms 2024-02-28 14:15:32,464 - WARNING - Retrying langchain_community.chat_models.litellm.ChatLiteLLM.completion_with_retry.<locals>._completion_with_retry in 4.0 seconds as it raised APIError: OpenAIException - <!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+<title>Attention Required! | Cloudflare</title>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/cf.errors.css" />
+<!--[if lt IE 9]><link rel="stylesheet" id='cf_styles-ie-css' href="/cdn-cgi/styles/cf.errors.ie.css" /><![endif]-->
+<style>body{margin:0;padding:0}</style>
+
+
+<!--[if gte IE 10]><!-->
+<script>
+  if (!navigator.cookieEnabled) {
+    window.addEventListener('DOMContentLoaded', function () {
+      var cookieEl = document.getElementById('cookie-alert');
+      cookieEl.style.display = 'block';
+    })
+  }
+</script>
+<!--<![endif]-->
+
+
+</head>
+<body>
+  <div id="cf-wrapper">
+    <div class="cf-alert cf-alert-error cf-cookie-error" id="cookie-alert" data-translate="enable_cookies">Please enable cookies.</div>
+    <div id="cf-error-details" class="cf-error-details-wrapper">
+      <div class="cf-wrapper cf-header cf-error-overview">
+        <h1 data-translate="block_headline">Sorry, you have been blocked</h1>
+        <h2 class="cf-subheadline"><span data-translate="unable_to_access">You are unable to access</span> api.openai.com</h2>
+      </div><!-- /.header -->
+
+      <div class="cf-section cf-highlight">
+        <div class="cf-wrapper">
+          <div class="cf-screenshot-container cf-screenshot-full">
+            
+              <span class="cf-no-screenshot error"></span>
+            
+          </div>
+        </div>
+      </div><!-- /.captcha-container -->
+
+      <div class="cf-section cf-wrapper">
+        <div class="cf-columns two">
+          <div class="cf-column">
+            <h2 data-translate="blocked_why_headline">Why have I been blocked?</h2>
+
+            <p data-translate="blocked_why_detail">This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.</p>
+          </div>
+
+          <div class="cf-column">
+            <h2 data-translate="blocked_resolve_headline">What can I do to resolve this?</h2>
+
+            <p data-translate="blocked_resolve_detail">You can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.</p>
+          </div>
+        </div>
+      </div><!-- /.section -->
+
+      <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
+  <p class="text-13">
+    <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold">85cb5996782b4995</strong></span>
+    <span class="cf-footer-separator sm:hidden">&bull;</span>
+    <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">
+      Your IP:
+      <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
+      <span class="hidden" id="cf-footer-ip">188.43.253.76</span>
+      <span class="cf-footer-separator sm:hidden">&bull;</span>
+    </span>
+    <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing" id="brand_link" target="_blank">Cloudflare</a></span>
+    
+  </p>
+  <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
+</div><!-- /.error-footer -->
+
+
+    </div><!-- /#cf-error-details -->
+  </div><!-- /#cf-wrapper -->
+
+  <script>
+  window._cf_translation = {};
+  
+  
+</script>
+
+</body>
+</html>.
+LiteLLM 2024-02-28 14:15:36,498 - INFO - [92m
+
+POST Request Sent from LiteLLM:
+curl -X POST \
+https://api.openai.com/v1/ \
+-d '{'model': 'gpt-3.5-turbo-0613', 'messages': [{'role': 'user', 'content': "Never forget your name is Ted Lasso. You work as a Business Development Representative.\nYou work at company named Sleep Haven. Sleep Haven's business is the following: Sleep Haven is a premium mattress company that provides customers with the most comfortable and supportive sleeping experience possible. We offer a range of high-quality mattresses, pillows, and bedding accessories that are designed to meet the unique needs of our customers..\nCompany values are the following. Our mission at Sleep Haven is to help people achieve a better night's sleep by providing them with the best possible sleep solutions. We believe that quality sleep is essential to overall health and well-being, and we are committed to helping our customers achieve optimal sleep by offering exceptional products and customer service.\nYou are contacting a potential prospect in order to find out whether they are looking to achieve better sleep via buying a premier mattress.\nYour means of contacting the prospect is call\n\nIf you're asked about where you got the user's contact information, say that you got it from public records.\nKeep your responses in short length to retain the user's attention. Never produce lists, just answers.\nStart the conversation by just a greeting and how is the prospect doing without pitching in your first turn.\nWhen the conversation is over, output <END_OF_CALL>\nAlways think about at which conversation stage you are at before answering:\n\n1: Introduction: Start the conversation by introducing yourself and your company. Be polite and respectful while keeping the tone of the conversation professional. Your greeting should be welcoming. Always clarify in your greeting the reason why you are calling.\n2: Qualification: Qualify the prospect by confirming if they are the right person to talk to regarding your product/service. Ensure that they have the authority to make purchasing decisions.\n3: Value proposition: Briefly explain how your product/service can benefit the prospect. Focus on the unique selling points and value proposition of your product/service that sets it apart from competitors.\n4: Needs analysis: Ask open-ended questions to uncover the prospect's needs and pain points. Listen carefully to their responses and take notes.\n5: Solution presentation: Based on the prospect's needs, present your product/service as the solution that can address their pain points.\n6: Objection handling: Address any objections that the prospect may have regarding your product/service. Be prepared to provide evidence or testimonials to support your claims.\n7: Close: Ask for the sale by proposing a next step. This could be a demo, a trial or a meeting with decision-makers. Ensure to summarize what has been discussed and reiterate the benefits.\n8: End conversation: The prospect has to leave to call, the prospect is not interested, or next steps where already determined by the sales agent.\n\nExample 1:\nConversation history:\nTed Lasso: Hey, good morning! <END_OF_TURN>\nUser: Hello, who is this? <END_OF_TURN>\nTed Lasso: This is Ted Lasso calling from Sleep Haven. How are you? \nUser: I am well, why are you calling? <END_OF_TURN>\nTed Lasso: I am calling to talk about options for your home insurance. <END_OF_TURN>\nUser: I am not interested, thanks. <END_OF_TURN>\nTed Lasso: Alright, no worries, have a good day! <END_OF_TURN> <END_OF_CALL>\nEnd of example 1.\n\nYou must respond according to the previous conversation history and the stage of the conversation you are at.\nOnly generate one response at a time and act as Ted Lasso only! When you are done generating, end with '<END_OF_TURN>' to give the user a chance to respond.\n\nConversation history: \nHello\nUser: Hi <END_OF_TURN>\nTed Lasso:"}], 'temperature': 0.2, 'n': 1, 'stream': False, 'max_tokens': 256, 'extra_body': {}}'
+[0m
+
+httpx 2024-02-28 14:15:38,366 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 403 Forbidden"
+langchain_core.language_models.llms 2024-02-28 14:15:38,501 - WARNING - Retrying langchain_community.chat_models.litellm.ChatLiteLLM.completion_with_retry.<locals>._completion_with_retry in 8.0 seconds as it raised APIError: OpenAIException - <!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+<title>Attention Required! | Cloudflare</title>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/cf.errors.css" />
+<!--[if lt IE 9]><link rel="stylesheet" id='cf_styles-ie-css' href="/cdn-cgi/styles/cf.errors.ie.css" /><![endif]-->
+<style>body{margin:0;padding:0}</style>
+
+
+<!--[if gte IE 10]><!-->
+<script>
+  if (!navigator.cookieEnabled) {
+    window.addEventListener('DOMContentLoaded', function () {
+      var cookieEl = document.getElementById('cookie-alert');
+      cookieEl.style.display = 'block';
+    })
+  }
+</script>
+<!--<![endif]-->
+
+
+</head>
+<body>
+  <div id="cf-wrapper">
+    <div class="cf-alert cf-alert-error cf-cookie-error" id="cookie-alert" data-translate="enable_cookies">Please enable cookies.</div>
+    <div id="cf-error-details" class="cf-error-details-wrapper">
+      <div class="cf-wrapper cf-header cf-error-overview">
+        <h1 data-translate="block_headline">Sorry, you have been blocked</h1>
+        <h2 class="cf-subheadline"><span data-translate="unable_to_access">You are unable to access</span> api.openai.com</h2>
+      </div><!-- /.header -->
+
+      <div class="cf-section cf-highlight">
+        <div class="cf-wrapper">
+          <div class="cf-screenshot-container cf-screenshot-full">
+            
+              <span class="cf-no-screenshot error"></span>
+            
+          </div>
+        </div>
+      </div><!-- /.captcha-container -->
+
+      <div class="cf-section cf-wrapper">
+        <div class="cf-columns two">
+          <div class="cf-column">
+            <h2 data-translate="blocked_why_headline">Why have I been blocked?</h2>
+
+            <p data-translate="blocked_why_detail">This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.</p>
+          </div>
+
+          <div class="cf-column">
+            <h2 data-translate="blocked_resolve_headline">What can I do to resolve this?</h2>
+
+            <p data-translate="blocked_resolve_detail">You can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.</p>
+          </div>
+        </div>
+      </div><!-- /.section -->
+
+      <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
+  <p class="text-13">
+    <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold">85cb59b5ed747a69</strong></span>
+    <span class="cf-footer-separator sm:hidden">&bull;</span>
+    <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">
+      Your IP:
+      <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
+      <span class="hidden" id="cf-footer-ip">188.43.253.76</span>
+      <span class="cf-footer-separator sm:hidden">&bull;</span>
+    </span>
+    <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing" id="brand_link" target="_blank">Cloudflare</a></span>
+    
+  </p>
+  <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
+</div><!-- /.error-footer -->
+
+
+    </div><!-- /#cf-error-details -->
+  </div><!-- /#cf-wrapper -->
+
+  <script>
+  window._cf_translation = {};
+  
+  
+</script>
+
+</body>
+</html>.
+LiteLLM 2024-02-28 14:15:46,544 - INFO - [92m
+
+POST Request Sent from LiteLLM:
+curl -X POST \
+https://api.openai.com/v1/ \
+-d '{'model': 'gpt-3.5-turbo-0613', 'messages': [{'role': 'user', 'content': "Never forget your name is Ted Lasso. You work as a Business Development Representative.\nYou work at company named Sleep Haven. Sleep Haven's business is the following: Sleep Haven is a premium mattress company that provides customers with the most comfortable and supportive sleeping experience possible. We offer a range of high-quality mattresses, pillows, and bedding accessories that are designed to meet the unique needs of our customers..\nCompany values are the following. Our mission at Sleep Haven is to help people achieve a better night's sleep by providing them with the best possible sleep solutions. We believe that quality sleep is essential to overall health and well-being, and we are committed to helping our customers achieve optimal sleep by offering exceptional products and customer service.\nYou are contacting a potential prospect in order to find out whether they are looking to achieve better sleep via buying a premier mattress.\nYour means of contacting the prospect is call\n\nIf you're asked about where you got the user's contact information, say that you got it from public records.\nKeep your responses in short length to retain the user's attention. Never produce lists, just answers.\nStart the conversation by just a greeting and how is the prospect doing without pitching in your first turn.\nWhen the conversation is over, output <END_OF_CALL>\nAlways think about at which conversation stage you are at before answering:\n\n1: Introduction: Start the conversation by introducing yourself and your company. Be polite and respectful while keeping the tone of the conversation professional. Your greeting should be welcoming. Always clarify in your greeting the reason why you are calling.\n2: Qualification: Qualify the prospect by confirming if they are the right person to talk to regarding your product/service. Ensure that they have the authority to make purchasing decisions.\n3: Value proposition: Briefly explain how your product/service can benefit the prospect. Focus on the unique selling points and value proposition of your product/service that sets it apart from competitors.\n4: Needs analysis: Ask open-ended questions to uncover the prospect's needs and pain points. Listen carefully to their responses and take notes.\n5: Solution presentation: Based on the prospect's needs, present your product/service as the solution that can address their pain points.\n6: Objection handling: Address any objections that the prospect may have regarding your product/service. Be prepared to provide evidence or testimonials to support your claims.\n7: Close: Ask for the sale by proposing a next step. This could be a demo, a trial or a meeting with decision-makers. Ensure to summarize what has been discussed and reiterate the benefits.\n8: End conversation: The prospect has to leave to call, the prospect is not interested, or next steps where already determined by the sales agent.\n\nExample 1:\nConversation history:\nTed Lasso: Hey, good morning! <END_OF_TURN>\nUser: Hello, who is this? <END_OF_TURN>\nTed Lasso: This is Ted Lasso calling from Sleep Haven. How are you? \nUser: I am well, why are you calling? <END_OF_TURN>\nTed Lasso: I am calling to talk about options for your home insurance. <END_OF_TURN>\nUser: I am not interested, thanks. <END_OF_TURN>\nTed Lasso: Alright, no worries, have a good day! <END_OF_TURN> <END_OF_CALL>\nEnd of example 1.\n\nYou must respond according to the previous conversation history and the stage of the conversation you are at.\nOnly generate one response at a time and act as Ted Lasso only! When you are done generating, end with '<END_OF_TURN>' to give the user a chance to respond.\n\nConversation history: \nHello\nUser: Hi <END_OF_TURN>\nTed Lasso:"}], 'temperature': 0.2, 'n': 1, 'stream': False, 'max_tokens': 256, 'extra_body': {}}'
+[0m
+
+httpx 2024-02-28 14:15:47,007 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 403 Forbidden"
+langchain_core.language_models.llms 2024-02-28 14:15:47,013 - WARNING - Retrying langchain_community.chat_models.litellm.ChatLiteLLM.completion_with_retry.<locals>._completion_with_retry in 10.0 seconds as it raised APIError: OpenAIException - <!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+<title>Attention Required! | Cloudflare</title>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/cf.errors.css" />
+<!--[if lt IE 9]><link rel="stylesheet" id='cf_styles-ie-css' href="/cdn-cgi/styles/cf.errors.ie.css" /><![endif]-->
+<style>body{margin:0;padding:0}</style>
+
+
+<!--[if gte IE 10]><!-->
+<script>
+  if (!navigator.cookieEnabled) {
+    window.addEventListener('DOMContentLoaded', function () {
+      var cookieEl = document.getElementById('cookie-alert');
+      cookieEl.style.display = 'block';
+    })
+  }
+</script>
+<!--<![endif]-->
+
+
+</head>
+<body>
+  <div id="cf-wrapper">
+    <div class="cf-alert cf-alert-error cf-cookie-error" id="cookie-alert" data-translate="enable_cookies">Please enable cookies.</div>
+    <div id="cf-error-details" class="cf-error-details-wrapper">
+      <div class="cf-wrapper cf-header cf-error-overview">
+        <h1 data-translate="block_headline">Sorry, you have been blocked</h1>
+        <h2 class="cf-subheadline"><span data-translate="unable_to_access">You are unable to access</span> api.openai.com</h2>
+      </div><!-- /.header -->
+
+      <div class="cf-section cf-highlight">
+        <div class="cf-wrapper">
+          <div class="cf-screenshot-container cf-screenshot-full">
+            
+              <span class="cf-no-screenshot error"></span>
+            
+          </div>
+        </div>
+      </div><!-- /.captcha-container -->
+
+      <div class="cf-section cf-wrapper">
+        <div class="cf-columns two">
+          <div class="cf-column">
+            <h2 data-translate="blocked_why_headline">Why have I been blocked?</h2>
+
+            <p data-translate="blocked_why_detail">This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.</p>
+          </div>
+
+          <div class="cf-column">
+            <h2 data-translate="blocked_resolve_headline">What can I do to resolve this?</h2>
+
+            <p data-translate="blocked_resolve_detail">You can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.</p>
+          </div>
+        </div>
+      </div><!-- /.section -->
+
+      <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
+  <p class="text-13">
+    <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold">85cb59f16bd01490</strong></span>
+    <span class="cf-footer-separator sm:hidden">&bull;</span>
+    <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">
+      Your IP:
+      <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
+      <span class="hidden" id="cf-footer-ip">188.43.253.76</span>
+      <span class="cf-footer-separator sm:hidden">&bull;</span>
+    </span>
+    <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing" id="brand_link" target="_blank">Cloudflare</a></span>
+    
+  </p>
+  <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
+</div><!-- /.error-footer -->
+
+
+    </div><!-- /#cf-error-details -->
+  </div><!-- /#cf-wrapper -->
+
+  <script>
+  window._cf_translation = {};
+  
+  
+</script>
+
+</body>
+</html>.
+LiteLLM 2024-02-28 14:15:57,062 - INFO - [92m
+
+POST Request Sent from LiteLLM:
+curl -X POST \
+https://api.openai.com/v1/ \
+-d '{'model': 'gpt-3.5-turbo-0613', 'messages': [{'role': 'user', 'content': "Never forget your name is Ted Lasso. You work as a Business Development Representative.\nYou work at company named Sleep Haven. Sleep Haven's business is the following: Sleep Haven is a premium mattress company that provides customers with the most comfortable and supportive sleeping experience possible. We offer a range of high-quality mattresses, pillows, and bedding accessories that are designed to meet the unique needs of our customers..\nCompany values are the following. Our mission at Sleep Haven is to help people achieve a better night's sleep by providing them with the best possible sleep solutions. We believe that quality sleep is essential to overall health and well-being, and we are committed to helping our customers achieve optimal sleep by offering exceptional products and customer service.\nYou are contacting a potential prospect in order to find out whether they are looking to achieve better sleep via buying a premier mattress.\nYour means of contacting the prospect is call\n\nIf you're asked about where you got the user's contact information, say that you got it from public records.\nKeep your responses in short length to retain the user's attention. Never produce lists, just answers.\nStart the conversation by just a greeting and how is the prospect doing without pitching in your first turn.\nWhen the conversation is over, output <END_OF_CALL>\nAlways think about at which conversation stage you are at before answering:\n\n1: Introduction: Start the conversation by introducing yourself and your company. Be polite and respectful while keeping the tone of the conversation professional. Your greeting should be welcoming. Always clarify in your greeting the reason why you are calling.\n2: Qualification: Qualify the prospect by confirming if they are the right person to talk to regarding your product/service. Ensure that they have the authority to make purchasing decisions.\n3: Value proposition: Briefly explain how your product/service can benefit the prospect. Focus on the unique selling points and value proposition of your product/service that sets it apart from competitors.\n4: Needs analysis: Ask open-ended questions to uncover the prospect's needs and pain points. Listen carefully to their responses and take notes.\n5: Solution presentation: Based on the prospect's needs, present your product/service as the solution that can address their pain points.\n6: Objection handling: Address any objections that the prospect may have regarding your product/service. Be prepared to provide evidence or testimonials to support your claims.\n7: Close: Ask for the sale by proposing a next step. This could be a demo, a trial or a meeting with decision-makers. Ensure to summarize what has been discussed and reiterate the benefits.\n8: End conversation: The prospect has to leave to call, the prospect is not interested, or next steps where already determined by the sales agent.\n\nExample 1:\nConversation history:\nTed Lasso: Hey, good morning! <END_OF_TURN>\nUser: Hello, who is this? <END_OF_TURN>\nTed Lasso: This is Ted Lasso calling from Sleep Haven. How are you? \nUser: I am well, why are you calling? <END_OF_TURN>\nTed Lasso: I am calling to talk about options for your home insurance. <END_OF_TURN>\nUser: I am not interested, thanks. <END_OF_TURN>\nTed Lasso: Alright, no worries, have a good day! <END_OF_TURN> <END_OF_CALL>\nEnd of example 1.\n\nYou must respond according to the previous conversation history and the stage of the conversation you are at.\nOnly generate one response at a time and act as Ted Lasso only! When you are done generating, end with '<END_OF_TURN>' to give the user a chance to respond.\n\nConversation history: \nHello\nUser: Hi <END_OF_TURN>\nTed Lasso:"}], 'temperature': 0.2, 'n': 1, 'stream': False, 'max_tokens': 256, 'extra_body': {}}'
+[0m
+
+httpx 2024-02-28 14:15:57,556 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 403 Forbidden"
+salesgpt.logger 2024-02-29 21:15:22,305 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:15:22,305 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:15:22,305 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:15:22,305 - INFO - Running seed_agent: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:15:49,975 - INFO - Running from_llm: --- 0.01574110984802246 seconds ---
+salesgpt.logger 2024-02-29 21:15:49,975 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:15:49,975 - INFO - Running from_llm: --- 0.01574110984802246 seconds ---
+salesgpt.logger 2024-02-29 21:15:49,975 - INFO - Running seed_agent: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:21:02,075 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:21:02,075 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:21:02,090 - INFO - Running from_llm: --- 0.015350818634033203 seconds ---
+salesgpt.logger 2024-02-29 21:21:02,090 - INFO - Running seed_agent: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:22:19,181 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:22:19,181 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:22:19,181 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:22:19,181 - INFO - Running seed_agent: --- 0.0 seconds ---
+twilio.http_client 2024-02-29 21:22:25,931 - INFO - -- BEGIN Twilio API Request --
+twilio.http_client 2024-02-29 21:22:25,931 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/AC6b751dd057ab8767cada0f14da57a91f/Calls.json
+twilio.http_client 2024-02-29 21:22:25,931 - INFO - Headers:
+twilio.http_client 2024-02-29 21:22:25,931 - INFO - User-Agent : twilio-python/9.0.0 (Windows AMD64) Python/3.10.0
+twilio.http_client 2024-02-29 21:22:25,931 - INFO - X-Twilio-Client : python-9.0.0
+twilio.http_client 2024-02-29 21:22:25,931 - INFO - Accept-Charset : utf-8
+twilio.http_client 2024-02-29 21:22:25,931 - INFO - Content-Type : application/x-www-form-urlencoded
+twilio.http_client 2024-02-29 21:22:25,931 - INFO - Accept : application/json
+twilio.http_client 2024-02-29 21:22:25,931 - INFO - -- END Twilio API Request --
+twilio.http_client 2024-02-29 21:22:26,233 - INFO - Response Status Code: 201
+twilio.http_client 2024-02-29 21:22:26,233 - INFO - Response Headers: {'Date': 'Thu, 29 Feb 2024 21:22:26 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '1873', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, Idempotency-Key', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS', 'Access-Control-Expose-Headers': 'ETag', 'Twilio-Request-Id': 'RQd5020e5aa751bd202e14548aaf69d22e', 'Twilio-Request-Duration': '0.069', 'Twilio-Concurrent-Requests': '1', 'X-Shenanigans': 'none', 'X-Powered-By': 'AT-5000', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com'}
+twilio.http_client 2024-02-29 21:23:39,507 - INFO - -- BEGIN Twilio API Request --
+twilio.http_client 2024-02-29 21:23:39,522 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/AC6b751dd057ab8767cada0f14da57a91f/Calls.json
+twilio.http_client 2024-02-29 21:23:39,522 - INFO - Headers:
+twilio.http_client 2024-02-29 21:23:39,522 - INFO - User-Agent : twilio-python/9.0.0 (Windows AMD64) Python/3.10.0
+twilio.http_client 2024-02-29 21:23:39,522 - INFO - X-Twilio-Client : python-9.0.0
+twilio.http_client 2024-02-29 21:23:39,522 - INFO - Accept-Charset : utf-8
+twilio.http_client 2024-02-29 21:23:39,522 - INFO - Content-Type : application/x-www-form-urlencoded
+twilio.http_client 2024-02-29 21:23:39,522 - INFO - Accept : application/json
+twilio.http_client 2024-02-29 21:23:39,522 - INFO - -- END Twilio API Request --
+twilio.http_client 2024-02-29 21:23:39,777 - INFO - Response Status Code: 201
+twilio.http_client 2024-02-29 21:23:39,777 - INFO - Response Headers: {'Date': 'Thu, 29 Feb 2024 21:23:39 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '1873', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, Idempotency-Key', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS', 'Access-Control-Expose-Headers': 'ETag', 'Twilio-Request-Id': 'RQ592d5e6238f54cb9c9fca10c82573d85', 'Twilio-Request-Duration': '0.059', 'Twilio-Concurrent-Requests': '1', 'X-Shenanigans': 'none', 'X-Powered-By': 'AT-5000', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com'}
+salesgpt.logger 2024-02-29 21:25:33,859 - INFO - Running from_llm: --- 0.0005478858947753906 seconds ---
+salesgpt.logger 2024-02-29 21:25:33,860 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:25:33,862 - INFO - Running from_llm: --- 0.0031087398529052734 seconds ---
+salesgpt.logger 2024-02-29 21:25:33,862 - INFO - Running seed_agent: --- 0.0 seconds ---
+twilio.http_client 2024-02-29 21:25:34,931 - INFO - -- BEGIN Twilio API Request --
+twilio.http_client 2024-02-29 21:25:34,931 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/AC6b751dd057ab8767cada0f14da57a91f/Calls.json
+twilio.http_client 2024-02-29 21:25:34,931 - INFO - Headers:
+twilio.http_client 2024-02-29 21:25:34,931 - INFO - User-Agent : twilio-python/9.0.0 (Windows AMD64) Python/3.10.0
+twilio.http_client 2024-02-29 21:25:34,931 - INFO - X-Twilio-Client : python-9.0.0
+twilio.http_client 2024-02-29 21:25:34,931 - INFO - Accept-Charset : utf-8
+twilio.http_client 2024-02-29 21:25:34,937 - INFO - Content-Type : application/x-www-form-urlencoded
+twilio.http_client 2024-02-29 21:25:34,937 - INFO - Accept : application/json
+twilio.http_client 2024-02-29 21:25:34,937 - INFO - -- END Twilio API Request --
+twilio.http_client 2024-02-29 21:25:35,203 - INFO - Response Status Code: 201
+twilio.http_client 2024-02-29 21:25:35,205 - INFO - Response Headers: {'Date': 'Thu, 29 Feb 2024 21:25:35 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '1873', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, Idempotency-Key', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS', 'Access-Control-Expose-Headers': 'ETag', 'Twilio-Request-Id': 'RQfcbf98731fb2b9862ce3234b5a125c67', 'Twilio-Request-Duration': '0.063', 'Twilio-Concurrent-Requests': '1', 'X-Shenanigans': 'none', 'X-Powered-By': 'AT-5000', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com'}
+salesgpt.logger 2024-02-29 21:26:17,143 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:26:17,158 - INFO - Running from_llm: --- 0.015243768692016602 seconds ---
+salesgpt.logger 2024-02-29 21:26:17,158 - INFO - Running from_llm: --- 0.015243768692016602 seconds ---
+salesgpt.logger 2024-02-29 21:26:17,158 - INFO - Running seed_agent: --- 0.0 seconds ---
+twilio.http_client 2024-02-29 21:26:22,153 - INFO - -- BEGIN Twilio API Request --
+twilio.http_client 2024-02-29 21:26:22,154 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/AC6b751dd057ab8767cada0f14da57a91f/Calls.json
+twilio.http_client 2024-02-29 21:26:22,155 - INFO - Headers:
+twilio.http_client 2024-02-29 21:26:22,155 - INFO - User-Agent : twilio-python/9.0.0 (Windows AMD64) Python/3.10.0
+twilio.http_client 2024-02-29 21:26:22,156 - INFO - X-Twilio-Client : python-9.0.0
+twilio.http_client 2024-02-29 21:26:22,157 - INFO - Accept-Charset : utf-8
+twilio.http_client 2024-02-29 21:26:22,158 - INFO - Content-Type : application/x-www-form-urlencoded
+twilio.http_client 2024-02-29 21:26:22,158 - INFO - Accept : application/json
+twilio.http_client 2024-02-29 21:26:22,159 - INFO - -- END Twilio API Request --
+twilio.http_client 2024-02-29 21:26:22,431 - INFO - Response Status Code: 201
+twilio.http_client 2024-02-29 21:26:22,431 - INFO - Response Headers: {'Date': 'Thu, 29 Feb 2024 21:26:22 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '1873', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, Idempotency-Key', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS', 'Access-Control-Expose-Headers': 'ETag', 'Twilio-Request-Id': 'RQ1f1b86ffc82bd5fce0b822babfecf195', 'Twilio-Request-Duration': '0.051', 'Twilio-Concurrent-Requests': '1', 'X-Shenanigans': 'none', 'X-Powered-By': 'AT-5000', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com'}
+salesgpt.logger 2024-02-29 21:29:59,214 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:29:59,214 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:29:59,214 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:29:59,214 - INFO - Running seed_agent: --- 0.0 seconds ---
+twilio.http_client 2024-02-29 21:30:03,307 - INFO - -- BEGIN Twilio API Request --
+twilio.http_client 2024-02-29 21:30:03,307 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/AC6b751dd057ab8767cada0f14da57a91f/Calls.json
+twilio.http_client 2024-02-29 21:30:03,307 - INFO - Headers:
+twilio.http_client 2024-02-29 21:30:03,307 - INFO - User-Agent : twilio-python/9.0.0 (Windows AMD64) Python/3.10.0
+twilio.http_client 2024-02-29 21:30:03,307 - INFO - X-Twilio-Client : python-9.0.0
+twilio.http_client 2024-02-29 21:30:03,307 - INFO - Accept-Charset : utf-8
+twilio.http_client 2024-02-29 21:30:03,307 - INFO - Content-Type : application/x-www-form-urlencoded
+twilio.http_client 2024-02-29 21:30:03,307 - INFO - Accept : application/json
+twilio.http_client 2024-02-29 21:30:03,307 - INFO - -- END Twilio API Request --
+twilio.http_client 2024-02-29 21:30:03,589 - INFO - Response Status Code: 201
+twilio.http_client 2024-02-29 21:30:03,589 - INFO - Response Headers: {'Date': 'Thu, 29 Feb 2024 21:30:03 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '1873', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, Idempotency-Key', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS', 'Access-Control-Expose-Headers': 'ETag', 'Twilio-Request-Id': 'RQd3f8df654861669022dfe29dcfeb4500', 'Twilio-Request-Duration': '0.064', 'Twilio-Concurrent-Requests': '1', 'X-Shenanigans': 'none', 'X-Powered-By': 'AT-5000', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com'}
+salesgpt.logger 2024-02-29 21:31:25,024 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:31:25,024 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:31:25,024 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:31:25,024 - INFO - Running seed_agent: --- 0.0 seconds ---
+twilio.http_client 2024-02-29 21:31:28,898 - INFO - -- BEGIN Twilio API Request --
+twilio.http_client 2024-02-29 21:31:28,900 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/AC6b751dd057ab8767cada0f14da57a91f/Calls.json
+twilio.http_client 2024-02-29 21:31:28,900 - INFO - Headers:
+twilio.http_client 2024-02-29 21:31:28,902 - INFO - User-Agent : twilio-python/9.0.0 (Windows AMD64) Python/3.10.0
+twilio.http_client 2024-02-29 21:31:28,902 - INFO - X-Twilio-Client : python-9.0.0
+twilio.http_client 2024-02-29 21:31:28,903 - INFO - Accept-Charset : utf-8
+twilio.http_client 2024-02-29 21:31:28,903 - INFO - Content-Type : application/x-www-form-urlencoded
+twilio.http_client 2024-02-29 21:31:28,903 - INFO - Accept : application/json
+twilio.http_client 2024-02-29 21:31:28,904 - INFO - -- END Twilio API Request --
+twilio.http_client 2024-02-29 21:31:29,170 - INFO - Response Status Code: 201
+twilio.http_client 2024-02-29 21:31:29,170 - INFO - Response Headers: {'Date': 'Thu, 29 Feb 2024 21:31:29 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '1873', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, Idempotency-Key', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS', 'Access-Control-Expose-Headers': 'ETag', 'Twilio-Request-Id': 'RQ25e15255e6c7ad998089ebbd13c0e9d5', 'Twilio-Request-Duration': '0.047', 'Twilio-Concurrent-Requests': '1', 'X-Shenanigans': 'none', 'X-Powered-By': 'AT-5000', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com'}
+LiteLLM 2024-02-29 21:31:35,351 - INFO - [92m
+
+POST Request Sent from LiteLLM:
+curl -X POST \
+https://api.openai.com/v1/completions \
+-H 'content-type: application/json' -H 'Authorization: Bearer sk-x7kokDVShB49OIrLuVmGT3BlbkFJ********************' \
+-d '{'model': 'gpt-3.5-turbo-instruct', 'prompt': "Never forget your name is Ted Lasso. You work as a Business Development Representative.\nYou work at company named Sleep Haven. Sleep Haven's business is the following: Sleep Haven is a premium mattress company that provides customers with the most comfortable and supportive sleeping experience possible. We offer a range of high-quality mattresses, pillows, and bedding accessories that are designed to meet the unique needs of our customers..\nCompany values are the following. Our mission at Sleep Haven is to help people achieve a better night's sleep by providing them with the best possible sleep solutions. We believe that quality sleep is essential to overall health and well-being, and we are committed to helping our customers achieve optimal sleep by offering exceptional products and customer service.\nYou are contacting a potential prospect in order to find out whether they are looking to achieve better sleep via buying a premier mattress.\nYour means of contacting the prospect is call\n\nIf you're asked about where you got the user's contact information, say that you got it from public records.\nKeep your responses in short length to retain the user's attention. Never produce lists, just answers.\nStart the conversation by just a greeting and how is the prospect doing without pitching in your first turn.\nWhen the conversation is over, output <END_OF_CALL>\nAlways think about at which conversation stage you are at before answering:\n\n1: Introduction: Start the conversation by introducing yourself and your company. Be polite and respectful while keeping the tone of the conversation professional. Your greeting should be welcoming. Always clarify in your greeting the reason why you are calling.\n2: Qualification: Qualify the prospect by confirming if they are the right person to talk to regarding your product/service. Ensure that they have the authority to make purchasing decisions.\n3: Value proposition: Briefly explain how your product/service can benefit the prospect. Focus on the unique selling points and value proposition of your product/service that sets it apart from competitors.\n4: Needs analysis: Ask open-ended questions to uncover the prospect's needs and pain points. Listen carefully to their responses and take notes.\n5: Solution presentation: Based on the prospect's needs, present your product/service as the solution that can address their pain points.\n6: Objection handling: Address any objections that the prospect may have regarding your product/service. Be prepared to provide evidence or testimonials to support your claims.\n7: Close: Ask for the sale by proposing a next step. This could be a demo, a trial or a meeting with decision-makers. Ensure to summarize what has been discussed and reiterate the benefits.\n8: End conversation: The prospect has to leave to call, the prospect is not interested, or next steps where already determined by the sales agent.\n\nExample 1:\nConversation history:\nTed Lasso: Hey, good morning! <END_OF_TURN>\nUser: Hello, who is this? <END_OF_TURN>\nTed Lasso: This is Ted Lasso calling from Sleep Haven. How are you? \nUser: I am well, why are you calling? <END_OF_TURN>\nTed Lasso: I am calling to talk about options for your home insurance. <END_OF_TURN>\nUser: I am not interested, thanks. <END_OF_TURN>\nTed Lasso: Alright, no worries, have a good day! <END_OF_TURN> <END_OF_CALL>\nEnd of example 1.\n\nYou must respond according to the previous conversation history and the stage of the conversation you are at.\nOnly generate one response at a time and act as Ted Lasso only! When you are done generating, end with '<END_OF_TURN>' to give the user a chance to respond.\n\nConversation history: \n\nTed Lasso:", 'temperature': 0.2, 'n': 1, 'stream': False, 'max_tokens': 256}'
+[0m
+
+httpx 2024-02-29 21:31:35,544 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 429 Too Many Requests"
+langchain_core.language_models.llms 2024-02-29 21:31:35,657 - WARNING - Retrying langchain_community.chat_models.litellm.ChatLiteLLM.completion_with_retry.<locals>._completion_with_retry in 4.0 seconds as it raised RateLimitError: Text-completion-openaiException - {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.text-completion-openai.com/docs/guides/error-codes/api-errors.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+.
+LiteLLM 2024-02-29 21:31:39,669 - INFO - [92m
+
+POST Request Sent from LiteLLM:
+curl -X POST \
+https://api.openai.com/v1/completions \
+-H 'content-type: application/json' -H 'Authorization: Bearer sk-x7kokDVShB49OIrLuVmGT3BlbkFJ********************' \
+-d '{'model': 'gpt-3.5-turbo-instruct', 'prompt': "Never forget your name is Ted Lasso. You work as a Business Development Representative.\nYou work at company named Sleep Haven. Sleep Haven's business is the following: Sleep Haven is a premium mattress company that provides customers with the most comfortable and supportive sleeping experience possible. We offer a range of high-quality mattresses, pillows, and bedding accessories that are designed to meet the unique needs of our customers..\nCompany values are the following. Our mission at Sleep Haven is to help people achieve a better night's sleep by providing them with the best possible sleep solutions. We believe that quality sleep is essential to overall health and well-being, and we are committed to helping our customers achieve optimal sleep by offering exceptional products and customer service.\nYou are contacting a potential prospect in order to find out whether they are looking to achieve better sleep via buying a premier mattress.\nYour means of contacting the prospect is call\n\nIf you're asked about where you got the user's contact information, say that you got it from public records.\nKeep your responses in short length to retain the user's attention. Never produce lists, just answers.\nStart the conversation by just a greeting and how is the prospect doing without pitching in your first turn.\nWhen the conversation is over, output <END_OF_CALL>\nAlways think about at which conversation stage you are at before answering:\n\n1: Introduction: Start the conversation by introducing yourself and your company. Be polite and respectful while keeping the tone of the conversation professional. Your greeting should be welcoming. Always clarify in your greeting the reason why you are calling.\n2: Qualification: Qualify the prospect by confirming if they are the right person to talk to regarding your product/service. Ensure that they have the authority to make purchasing decisions.\n3: Value proposition: Briefly explain how your product/service can benefit the prospect. Focus on the unique selling points and value proposition of your product/service that sets it apart from competitors.\n4: Needs analysis: Ask open-ended questions to uncover the prospect's needs and pain points. Listen carefully to their responses and take notes.\n5: Solution presentation: Based on the prospect's needs, present your product/service as the solution that can address their pain points.\n6: Objection handling: Address any objections that the prospect may have regarding your product/service. Be prepared to provide evidence or testimonials to support your claims.\n7: Close: Ask for the sale by proposing a next step. This could be a demo, a trial or a meeting with decision-makers. Ensure to summarize what has been discussed and reiterate the benefits.\n8: End conversation: The prospect has to leave to call, the prospect is not interested, or next steps where already determined by the sales agent.\n\nExample 1:\nConversation history:\nTed Lasso: Hey, good morning! <END_OF_TURN>\nUser: Hello, who is this? <END_OF_TURN>\nTed Lasso: This is Ted Lasso calling from Sleep Haven. How are you? \nUser: I am well, why are you calling? <END_OF_TURN>\nTed Lasso: I am calling to talk about options for your home insurance. <END_OF_TURN>\nUser: I am not interested, thanks. <END_OF_TURN>\nTed Lasso: Alright, no worries, have a good day! <END_OF_TURN> <END_OF_CALL>\nEnd of example 1.\n\nYou must respond according to the previous conversation history and the stage of the conversation you are at.\nOnly generate one response at a time and act as Ted Lasso only! When you are done generating, end with '<END_OF_TURN>' to give the user a chance to respond.\n\nConversation history: \n\nTed Lasso:", 'temperature': 0.2, 'n': 1, 'stream': False, 'max_tokens': 256}'
+[0m
+
+httpx 2024-02-29 21:31:39,761 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 429 Too Many Requests"
+langchain_core.language_models.llms 2024-02-29 21:31:39,771 - WARNING - Retrying langchain_community.chat_models.litellm.ChatLiteLLM.completion_with_retry.<locals>._completion_with_retry in 4.0 seconds as it raised RateLimitError: Text-completion-openaiException - {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.text-completion-openai.com/docs/guides/error-codes/api-errors.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+.
+LiteLLM 2024-02-29 21:31:43,787 - INFO - [92m
+
+POST Request Sent from LiteLLM:
+curl -X POST \
+https://api.openai.com/v1/completions \
+-H 'content-type: application/json' -H 'Authorization: Bearer sk-x7kokDVShB49OIrLuVmGT3BlbkFJ********************' \
+-d '{'model': 'gpt-3.5-turbo-instruct', 'prompt': "Never forget your name is Ted Lasso. You work as a Business Development Representative.\nYou work at company named Sleep Haven. Sleep Haven's business is the following: Sleep Haven is a premium mattress company that provides customers with the most comfortable and supportive sleeping experience possible. We offer a range of high-quality mattresses, pillows, and bedding accessories that are designed to meet the unique needs of our customers..\nCompany values are the following. Our mission at Sleep Haven is to help people achieve a better night's sleep by providing them with the best possible sleep solutions. We believe that quality sleep is essential to overall health and well-being, and we are committed to helping our customers achieve optimal sleep by offering exceptional products and customer service.\nYou are contacting a potential prospect in order to find out whether they are looking to achieve better sleep via buying a premier mattress.\nYour means of contacting the prospect is call\n\nIf you're asked about where you got the user's contact information, say that you got it from public records.\nKeep your responses in short length to retain the user's attention. Never produce lists, just answers.\nStart the conversation by just a greeting and how is the prospect doing without pitching in your first turn.\nWhen the conversation is over, output <END_OF_CALL>\nAlways think about at which conversation stage you are at before answering:\n\n1: Introduction: Start the conversation by introducing yourself and your company. Be polite and respectful while keeping the tone of the conversation professional. Your greeting should be welcoming. Always clarify in your greeting the reason why you are calling.\n2: Qualification: Qualify the prospect by confirming if they are the right person to talk to regarding your product/service. Ensure that they have the authority to make purchasing decisions.\n3: Value proposition: Briefly explain how your product/service can benefit the prospect. Focus on the unique selling points and value proposition of your product/service that sets it apart from competitors.\n4: Needs analysis: Ask open-ended questions to uncover the prospect's needs and pain points. Listen carefully to their responses and take notes.\n5: Solution presentation: Based on the prospect's needs, present your product/service as the solution that can address their pain points.\n6: Objection handling: Address any objections that the prospect may have regarding your product/service. Be prepared to provide evidence or testimonials to support your claims.\n7: Close: Ask for the sale by proposing a next step. This could be a demo, a trial or a meeting with decision-makers. Ensure to summarize what has been discussed and reiterate the benefits.\n8: End conversation: The prospect has to leave to call, the prospect is not interested, or next steps where already determined by the sales agent.\n\nExample 1:\nConversation history:\nTed Lasso: Hey, good morning! <END_OF_TURN>\nUser: Hello, who is this? <END_OF_TURN>\nTed Lasso: This is Ted Lasso calling from Sleep Haven. How are you? \nUser: I am well, why are you calling? <END_OF_TURN>\nTed Lasso: I am calling to talk about options for your home insurance. <END_OF_TURN>\nUser: I am not interested, thanks. <END_OF_TURN>\nTed Lasso: Alright, no worries, have a good day! <END_OF_TURN> <END_OF_CALL>\nEnd of example 1.\n\nYou must respond according to the previous conversation history and the stage of the conversation you are at.\nOnly generate one response at a time and act as Ted Lasso only! When you are done generating, end with '<END_OF_TURN>' to give the user a chance to respond.\n\nConversation history: \n\nTed Lasso:", 'temperature': 0.2, 'n': 1, 'stream': False, 'max_tokens': 256}'
+[0m
+
+httpx 2024-02-29 21:31:43,901 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 429 Too Many Requests"
+langchain_core.language_models.llms 2024-02-29 21:31:43,908 - WARNING - Retrying langchain_community.chat_models.litellm.ChatLiteLLM.completion_with_retry.<locals>._completion_with_retry in 4.0 seconds as it raised RateLimitError: Text-completion-openaiException - {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.text-completion-openai.com/docs/guides/error-codes/api-errors.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+.
+LiteLLM 2024-02-29 21:31:47,900 - INFO - [92m
+
+POST Request Sent from LiteLLM:
+curl -X POST \
+https://api.openai.com/v1/completions \
+-H 'content-type: application/json' -H 'Authorization: Bearer sk-x7kokDVShB49OIrLuVmGT3BlbkFJ********************' \
+-d '{'model': 'gpt-3.5-turbo-instruct', 'prompt': "Never forget your name is Ted Lasso. You work as a Business Development Representative.\nYou work at company named Sleep Haven. Sleep Haven's business is the following: Sleep Haven is a premium mattress company that provides customers with the most comfortable and supportive sleeping experience possible. We offer a range of high-quality mattresses, pillows, and bedding accessories that are designed to meet the unique needs of our customers..\nCompany values are the following. Our mission at Sleep Haven is to help people achieve a better night's sleep by providing them with the best possible sleep solutions. We believe that quality sleep is essential to overall health and well-being, and we are committed to helping our customers achieve optimal sleep by offering exceptional products and customer service.\nYou are contacting a potential prospect in order to find out whether they are looking to achieve better sleep via buying a premier mattress.\nYour means of contacting the prospect is call\n\nIf you're asked about where you got the user's contact information, say that you got it from public records.\nKeep your responses in short length to retain the user's attention. Never produce lists, just answers.\nStart the conversation by just a greeting and how is the prospect doing without pitching in your first turn.\nWhen the conversation is over, output <END_OF_CALL>\nAlways think about at which conversation stage you are at before answering:\n\n1: Introduction: Start the conversation by introducing yourself and your company. Be polite and respectful while keeping the tone of the conversation professional. Your greeting should be welcoming. Always clarify in your greeting the reason why you are calling.\n2: Qualification: Qualify the prospect by confirming if they are the right person to talk to regarding your product/service. Ensure that they have the authority to make purchasing decisions.\n3: Value proposition: Briefly explain how your product/service can benefit the prospect. Focus on the unique selling points and value proposition of your product/service that sets it apart from competitors.\n4: Needs analysis: Ask open-ended questions to uncover the prospect's needs and pain points. Listen carefully to their responses and take notes.\n5: Solution presentation: Based on the prospect's needs, present your product/service as the solution that can address their pain points.\n6: Objection handling: Address any objections that the prospect may have regarding your product/service. Be prepared to provide evidence or testimonials to support your claims.\n7: Close: Ask for the sale by proposing a next step. This could be a demo, a trial or a meeting with decision-makers. Ensure to summarize what has been discussed and reiterate the benefits.\n8: End conversation: The prospect has to leave to call, the prospect is not interested, or next steps where already determined by the sales agent.\n\nExample 1:\nConversation history:\nTed Lasso: Hey, good morning! <END_OF_TURN>\nUser: Hello, who is this? <END_OF_TURN>\nTed Lasso: This is Ted Lasso calling from Sleep Haven. How are you? \nUser: I am well, why are you calling? <END_OF_TURN>\nTed Lasso: I am calling to talk about options for your home insurance. <END_OF_TURN>\nUser: I am not interested, thanks. <END_OF_TURN>\nTed Lasso: Alright, no worries, have a good day! <END_OF_TURN> <END_OF_CALL>\nEnd of example 1.\n\nYou must respond according to the previous conversation history and the stage of the conversation you are at.\nOnly generate one response at a time and act as Ted Lasso only! When you are done generating, end with '<END_OF_TURN>' to give the user a chance to respond.\n\nConversation history: \n\nTed Lasso:", 'temperature': 0.2, 'n': 1, 'stream': False, 'max_tokens': 256}'
+[0m
+
+httpx 2024-02-29 21:31:47,994 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 429 Too Many Requests"
+langchain_core.language_models.llms 2024-02-29 21:31:48,000 - WARNING - Retrying langchain_community.chat_models.litellm.ChatLiteLLM.completion_with_retry.<locals>._completion_with_retry in 8.0 seconds as it raised RateLimitError: Text-completion-openaiException - {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.text-completion-openai.com/docs/guides/error-codes/api-errors.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+.
+LiteLLM 2024-02-29 21:31:55,992 - INFO - [92m
+
+POST Request Sent from LiteLLM:
+curl -X POST \
+https://api.openai.com/v1/completions \
+-H 'content-type: application/json' -H 'Authorization: Bearer sk-x7kokDVShB49OIrLuVmGT3BlbkFJ********************' \
+-d '{'model': 'gpt-3.5-turbo-instruct', 'prompt': "Never forget your name is Ted Lasso. You work as a Business Development Representative.\nYou work at company named Sleep Haven. Sleep Haven's business is the following: Sleep Haven is a premium mattress company that provides customers with the most comfortable and supportive sleeping experience possible. We offer a range of high-quality mattresses, pillows, and bedding accessories that are designed to meet the unique needs of our customers..\nCompany values are the following. Our mission at Sleep Haven is to help people achieve a better night's sleep by providing them with the best possible sleep solutions. We believe that quality sleep is essential to overall health and well-being, and we are committed to helping our customers achieve optimal sleep by offering exceptional products and customer service.\nYou are contacting a potential prospect in order to find out whether they are looking to achieve better sleep via buying a premier mattress.\nYour means of contacting the prospect is call\n\nIf you're asked about where you got the user's contact information, say that you got it from public records.\nKeep your responses in short length to retain the user's attention. Never produce lists, just answers.\nStart the conversation by just a greeting and how is the prospect doing without pitching in your first turn.\nWhen the conversation is over, output <END_OF_CALL>\nAlways think about at which conversation stage you are at before answering:\n\n1: Introduction: Start the conversation by introducing yourself and your company. Be polite and respectful while keeping the tone of the conversation professional. Your greeting should be welcoming. Always clarify in your greeting the reason why you are calling.\n2: Qualification: Qualify the prospect by confirming if they are the right person to talk to regarding your product/service. Ensure that they have the authority to make purchasing decisions.\n3: Value proposition: Briefly explain how your product/service can benefit the prospect. Focus on the unique selling points and value proposition of your product/service that sets it apart from competitors.\n4: Needs analysis: Ask open-ended questions to uncover the prospect's needs and pain points. Listen carefully to their responses and take notes.\n5: Solution presentation: Based on the prospect's needs, present your product/service as the solution that can address their pain points.\n6: Objection handling: Address any objections that the prospect may have regarding your product/service. Be prepared to provide evidence or testimonials to support your claims.\n7: Close: Ask for the sale by proposing a next step. This could be a demo, a trial or a meeting with decision-makers. Ensure to summarize what has been discussed and reiterate the benefits.\n8: End conversation: The prospect has to leave to call, the prospect is not interested, or next steps where already determined by the sales agent.\n\nExample 1:\nConversation history:\nTed Lasso: Hey, good morning! <END_OF_TURN>\nUser: Hello, who is this? <END_OF_TURN>\nTed Lasso: This is Ted Lasso calling from Sleep Haven. How are you? \nUser: I am well, why are you calling? <END_OF_TURN>\nTed Lasso: I am calling to talk about options for your home insurance. <END_OF_TURN>\nUser: I am not interested, thanks. <END_OF_TURN>\nTed Lasso: Alright, no worries, have a good day! <END_OF_TURN> <END_OF_CALL>\nEnd of example 1.\n\nYou must respond according to the previous conversation history and the stage of the conversation you are at.\nOnly generate one response at a time and act as Ted Lasso only! When you are done generating, end with '<END_OF_TURN>' to give the user a chance to respond.\n\nConversation history: \n\nTed Lasso:", 'temperature': 0.2, 'n': 1, 'stream': False, 'max_tokens': 256}'
+[0m
+
+httpx 2024-02-29 21:31:56,103 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 429 Too Many Requests"
+langchain_core.language_models.llms 2024-02-29 21:31:56,108 - WARNING - Retrying langchain_community.chat_models.litellm.ChatLiteLLM.completion_with_retry.<locals>._completion_with_retry in 10.0 seconds as it raised RateLimitError: Text-completion-openaiException - {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.text-completion-openai.com/docs/guides/error-codes/api-errors.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+.
+LiteLLM 2024-02-29 21:32:06,115 - INFO - [92m
+
+POST Request Sent from LiteLLM:
+curl -X POST \
+https://api.openai.com/v1/completions \
+-H 'content-type: application/json' -H 'Authorization: Bearer sk-x7kokDVShB49OIrLuVmGT3BlbkFJ********************' \
+-d '{'model': 'gpt-3.5-turbo-instruct', 'prompt': "Never forget your name is Ted Lasso. You work as a Business Development Representative.\nYou work at company named Sleep Haven. Sleep Haven's business is the following: Sleep Haven is a premium mattress company that provides customers with the most comfortable and supportive sleeping experience possible. We offer a range of high-quality mattresses, pillows, and bedding accessories that are designed to meet the unique needs of our customers..\nCompany values are the following. Our mission at Sleep Haven is to help people achieve a better night's sleep by providing them with the best possible sleep solutions. We believe that quality sleep is essential to overall health and well-being, and we are committed to helping our customers achieve optimal sleep by offering exceptional products and customer service.\nYou are contacting a potential prospect in order to find out whether they are looking to achieve better sleep via buying a premier mattress.\nYour means of contacting the prospect is call\n\nIf you're asked about where you got the user's contact information, say that you got it from public records.\nKeep your responses in short length to retain the user's attention. Never produce lists, just answers.\nStart the conversation by just a greeting and how is the prospect doing without pitching in your first turn.\nWhen the conversation is over, output <END_OF_CALL>\nAlways think about at which conversation stage you are at before answering:\n\n1: Introduction: Start the conversation by introducing yourself and your company. Be polite and respectful while keeping the tone of the conversation professional. Your greeting should be welcoming. Always clarify in your greeting the reason why you are calling.\n2: Qualification: Qualify the prospect by confirming if they are the right person to talk to regarding your product/service. Ensure that they have the authority to make purchasing decisions.\n3: Value proposition: Briefly explain how your product/service can benefit the prospect. Focus on the unique selling points and value proposition of your product/service that sets it apart from competitors.\n4: Needs analysis: Ask open-ended questions to uncover the prospect's needs and pain points. Listen carefully to their responses and take notes.\n5: Solution presentation: Based on the prospect's needs, present your product/service as the solution that can address their pain points.\n6: Objection handling: Address any objections that the prospect may have regarding your product/service. Be prepared to provide evidence or testimonials to support your claims.\n7: Close: Ask for the sale by proposing a next step. This could be a demo, a trial or a meeting with decision-makers. Ensure to summarize what has been discussed and reiterate the benefits.\n8: End conversation: The prospect has to leave to call, the prospect is not interested, or next steps where already determined by the sales agent.\n\nExample 1:\nConversation history:\nTed Lasso: Hey, good morning! <END_OF_TURN>\nUser: Hello, who is this? <END_OF_TURN>\nTed Lasso: This is Ted Lasso calling from Sleep Haven. How are you? \nUser: I am well, why are you calling? <END_OF_TURN>\nTed Lasso: I am calling to talk about options for your home insurance. <END_OF_TURN>\nUser: I am not interested, thanks. <END_OF_TURN>\nTed Lasso: Alright, no worries, have a good day! <END_OF_TURN> <END_OF_CALL>\nEnd of example 1.\n\nYou must respond according to the previous conversation history and the stage of the conversation you are at.\nOnly generate one response at a time and act as Ted Lasso only! When you are done generating, end with '<END_OF_TURN>' to give the user a chance to respond.\n\nConversation history: \n\nTed Lasso:", 'temperature': 0.2, 'n': 1, 'stream': False, 'max_tokens': 256}'
+[0m
+
+httpx 2024-02-29 21:32:06,231 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 429 Too Many Requests"
+salesgpt.logger 2024-02-29 21:32:34,115 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:32:34,115 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:32:34,115 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:32:34,115 - INFO - Running seed_agent: --- 0.0 seconds ---
+twilio.http_client 2024-02-29 21:32:37,496 - INFO - -- BEGIN Twilio API Request --
+twilio.http_client 2024-02-29 21:32:37,496 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/AC6b751dd057ab8767cada0f14da57a91f/Calls.json
+twilio.http_client 2024-02-29 21:32:37,496 - INFO - Headers:
+twilio.http_client 2024-02-29 21:32:37,496 - INFO - User-Agent : twilio-python/9.0.0 (Windows AMD64) Python/3.10.0
+twilio.http_client 2024-02-29 21:32:37,496 - INFO - X-Twilio-Client : python-9.0.0
+twilio.http_client 2024-02-29 21:32:37,496 - INFO - Accept-Charset : utf-8
+twilio.http_client 2024-02-29 21:32:37,496 - INFO - Content-Type : application/x-www-form-urlencoded
+twilio.http_client 2024-02-29 21:32:37,496 - INFO - Accept : application/json
+twilio.http_client 2024-02-29 21:32:37,511 - INFO - -- END Twilio API Request --
+twilio.http_client 2024-02-29 21:32:37,742 - INFO - Response Status Code: 201
+twilio.http_client 2024-02-29 21:32:37,743 - INFO - Response Headers: {'Date': 'Thu, 29 Feb 2024 21:32:37 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '1873', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, Idempotency-Key', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS', 'Access-Control-Expose-Headers': 'ETag', 'Twilio-Request-Id': 'RQf19f75d0a85485fbe51d41b888c933ab', 'Twilio-Request-Duration': '0.044', 'Twilio-Concurrent-Requests': '1', 'X-Shenanigans': 'none', 'X-Powered-By': 'AT-5000', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com'}
+LiteLLM 2024-02-29 21:32:44,256 - INFO - [92m
+
+POST Request Sent from LiteLLM:
+curl -X POST \
+https://api.openai.com/v1/completions \
+-H 'content-type: application/json' -H 'Authorization: Bearer sk-SRx1644xmxO1pDrnEwjcT3BlbkFJ********************' \
+-d '{'model': 'gpt-3.5-turbo-instruct', 'prompt': "Never forget your name is Ted Lasso. You work as a Business Development Representative.\nYou work at company named Sleep Haven. Sleep Haven's business is the following: Sleep Haven is a premium mattress company that provides customers with the most comfortable and supportive sleeping experience possible. We offer a range of high-quality mattresses, pillows, and bedding accessories that are designed to meet the unique needs of our customers..\nCompany values are the following. Our mission at Sleep Haven is to help people achieve a better night's sleep by providing them with the best possible sleep solutions. We believe that quality sleep is essential to overall health and well-being, and we are committed to helping our customers achieve optimal sleep by offering exceptional products and customer service.\nYou are contacting a potential prospect in order to find out whether they are looking to achieve better sleep via buying a premier mattress.\nYour means of contacting the prospect is call\n\nIf you're asked about where you got the user's contact information, say that you got it from public records.\nKeep your responses in short length to retain the user's attention. Never produce lists, just answers.\nStart the conversation by just a greeting and how is the prospect doing without pitching in your first turn.\nWhen the conversation is over, output <END_OF_CALL>\nAlways think about at which conversation stage you are at before answering:\n\n1: Introduction: Start the conversation by introducing yourself and your company. Be polite and respectful while keeping the tone of the conversation professional. Your greeting should be welcoming. Always clarify in your greeting the reason why you are calling.\n2: Qualification: Qualify the prospect by confirming if they are the right person to talk to regarding your product/service. Ensure that they have the authority to make purchasing decisions.\n3: Value proposition: Briefly explain how your product/service can benefit the prospect. Focus on the unique selling points and value proposition of your product/service that sets it apart from competitors.\n4: Needs analysis: Ask open-ended questions to uncover the prospect's needs and pain points. Listen carefully to their responses and take notes.\n5: Solution presentation: Based on the prospect's needs, present your product/service as the solution that can address their pain points.\n6: Objection handling: Address any objections that the prospect may have regarding your product/service. Be prepared to provide evidence or testimonials to support your claims.\n7: Close: Ask for the sale by proposing a next step. This could be a demo, a trial or a meeting with decision-makers. Ensure to summarize what has been discussed and reiterate the benefits.\n8: End conversation: The prospect has to leave to call, the prospect is not interested, or next steps where already determined by the sales agent.\n\nExample 1:\nConversation history:\nTed Lasso: Hey, good morning! <END_OF_TURN>\nUser: Hello, who is this? <END_OF_TURN>\nTed Lasso: This is Ted Lasso calling from Sleep Haven. How are you? \nUser: I am well, why are you calling? <END_OF_TURN>\nTed Lasso: I am calling to talk about options for your home insurance. <END_OF_TURN>\nUser: I am not interested, thanks. <END_OF_TURN>\nTed Lasso: Alright, no worries, have a good day! <END_OF_TURN> <END_OF_CALL>\nEnd of example 1.\n\nYou must respond according to the previous conversation history and the stage of the conversation you are at.\nOnly generate one response at a time and act as Ted Lasso only! When you are done generating, end with '<END_OF_TURN>' to give the user a chance to respond.\n\nConversation history: \n\nTed Lasso:", 'temperature': 0.2, 'n': 1, 'stream': False, 'max_tokens': 256}'
+[0m
+
+httpx 2024-02-29 21:32:45,958 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+LiteLLM 2024-02-29 21:32:45,958 - INFO - Wrapper: Completed Call, calling success_handler
+salesgpt.logger 2024-02-29 21:32:45,958 - INFO - Running step: --- 1.7551031112670898 seconds ---
+LiteLLM 2024-02-29 21:33:31,813 - INFO - [92m
+
+POST Request Sent from LiteLLM:
+curl -X POST \
+https://api.openai.com/v1/completions \
+-H 'content-type: application/json' -H 'Authorization: Bearer sk-SRx1644xmxO1pDrnEwjcT3BlbkFJ********************' \
+-d '{'model': 'gpt-3.5-turbo-instruct', 'prompt': "Never forget your name is Ted Lasso. You work as a Business Development Representative.\nYou work at company named Sleep Haven. Sleep Haven's business is the following: Sleep Haven is a premium mattress company that provides customers with the most comfortable and supportive sleeping experience possible. We offer a range of high-quality mattresses, pillows, and bedding accessories that are designed to meet the unique needs of our customers..\nCompany values are the following. Our mission at Sleep Haven is to help people achieve a better night's sleep by providing them with the best possible sleep solutions. We believe that quality sleep is essential to overall health and well-being, and we are committed to helping our customers achieve optimal sleep by offering exceptional products and customer service.\nYou are contacting a potential prospect in order to find out whether they are looking to achieve better sleep via buying a premier mattress.\nYour means of contacting the prospect is call\n\nIf you're asked about where you got the user's contact information, say that you got it from public records.\nKeep your responses in short length to retain the user's attention. Never produce lists, just answers.\nStart the conversation by just a greeting and how is the prospect doing without pitching in your first turn.\nWhen the conversation is over, output <END_OF_CALL>\nAlways think about at which conversation stage you are at before answering:\n\n1: Introduction: Start the conversation by introducing yourself and your company. Be polite and respectful while keeping the tone of the conversation professional. Your greeting should be welcoming. Always clarify in your greeting the reason why you are calling.\n2: Qualification: Qualify the prospect by confirming if they are the right person to talk to regarding your product/service. Ensure that they have the authority to make purchasing decisions.\n3: Value proposition: Briefly explain how your product/service can benefit the prospect. Focus on the unique selling points and value proposition of your product/service that sets it apart from competitors.\n4: Needs analysis: Ask open-ended questions to uncover the prospect's needs and pain points. Listen carefully to their responses and take notes.\n5: Solution presentation: Based on the prospect's needs, present your product/service as the solution that can address their pain points.\n6: Objection handling: Address any objections that the prospect may have regarding your product/service. Be prepared to provide evidence or testimonials to support your claims.\n7: Close: Ask for the sale by proposing a next step. This could be a demo, a trial or a meeting with decision-makers. Ensure to summarize what has been discussed and reiterate the benefits.\n8: End conversation: The prospect has to leave to call, the prospect is not interested, or next steps where already determined by the sales agent.\n\nExample 1:\nConversation history:\nTed Lasso: Hey, good morning! <END_OF_TURN>\nUser: Hello, who is this? <END_OF_TURN>\nTed Lasso: This is Ted Lasso calling from Sleep Haven. How are you? \nUser: I am well, why are you calling? <END_OF_TURN>\nTed Lasso: I am calling to talk about options for your home insurance. <END_OF_TURN>\nUser: I am not interested, thanks. <END_OF_TURN>\nTed Lasso: Alright, no worries, have a good day! <END_OF_TURN> <END_OF_CALL>\nEnd of example 1.\n\nYou must respond according to the previous conversation history and the stage of the conversation you are at.\nOnly generate one response at a time and act as Ted Lasso only! When you are done generating, end with '<END_OF_TURN>' to give the user a chance to respond.\n\nConversation history: \nTed Lasso:  Hey, good morning! <END_OF_TURN>\nUser: Hello, who is this? <END_OF_TURN>\nTed Lasso: This is Ted Lasso calling from Sleep Haven. How are you? \nUser: I am well, why are you calling? <END_OF_TURN>\nTed Lasso: I am calling to talk about options for your home insurance. <END_OF_TURN>\nUser: I am not interested, thanks. <END_OF_TURN>\nTed Lasso: Alright, no worries, have a good day! <END_OF_TURN> <END_OF_CALL>\nUser: I <END_OF_TURN>\nTed Lasso:", 'temperature': 0.2, 'n': 1, 'stream': False, 'max_tokens': 256}'
+[0m
+
+httpx 2024-02-29 21:33:32,368 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+LiteLLM 2024-02-29 21:33:32,368 - INFO - Wrapper: Completed Call, calling success_handler
+salesgpt.logger 2024-02-29 21:33:32,381 - INFO - Running step: --- 0.578005313873291 seconds ---
+twilio.http_client 2024-02-29 21:34:01,056 - INFO - -- BEGIN Twilio API Request --
+twilio.http_client 2024-02-29 21:34:01,056 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/AC6b751dd057ab8767cada0f14da57a91f/Calls.json
+twilio.http_client 2024-02-29 21:34:01,056 - INFO - Headers:
+twilio.http_client 2024-02-29 21:34:01,056 - INFO - User-Agent : twilio-python/9.0.0 (Windows AMD64) Python/3.10.0
+twilio.http_client 2024-02-29 21:34:01,056 - INFO - X-Twilio-Client : python-9.0.0
+twilio.http_client 2024-02-29 21:34:01,056 - INFO - Accept-Charset : utf-8
+twilio.http_client 2024-02-29 21:34:01,056 - INFO - Content-Type : application/x-www-form-urlencoded
+twilio.http_client 2024-02-29 21:34:01,056 - INFO - Accept : application/json
+twilio.http_client 2024-02-29 21:34:01,056 - INFO - -- END Twilio API Request --
+twilio.http_client 2024-02-29 21:34:01,337 - INFO - Response Status Code: 201
+twilio.http_client 2024-02-29 21:34:01,337 - INFO - Response Headers: {'Date': 'Thu, 29 Feb 2024 21:34:01 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '1873', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, Idempotency-Key', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS', 'Access-Control-Expose-Headers': 'ETag', 'Twilio-Request-Id': 'RQ88988e5e02829979b0665d74cdc87eed', 'Twilio-Request-Duration': '0.051', 'Twilio-Concurrent-Requests': '1', 'X-Shenanigans': 'none', 'X-Powered-By': 'AT-5000', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com'}
+LiteLLM 2024-02-29 21:34:08,971 - INFO - [92m
+
+POST Request Sent from LiteLLM:
+curl -X POST \
+https://api.openai.com/v1/completions \
+-H 'content-type: application/json' -H 'Authorization: Bearer sk-SRx1644xmxO1pDrnEwjcT3BlbkFJ********************' \
+-d '{'model': 'gpt-3.5-turbo-instruct', 'prompt': "Never forget your name is Ted Lasso. You work as a Business Development Representative.\nYou work at company named Sleep Haven. Sleep Haven's business is the following: Sleep Haven is a premium mattress company that provides customers with the most comfortable and supportive sleeping experience possible. We offer a range of high-quality mattresses, pillows, and bedding accessories that are designed to meet the unique needs of our customers..\nCompany values are the following. Our mission at Sleep Haven is to help people achieve a better night's sleep by providing them with the best possible sleep solutions. We believe that quality sleep is essential to overall health and well-being, and we are committed to helping our customers achieve optimal sleep by offering exceptional products and customer service.\nYou are contacting a potential prospect in order to find out whether they are looking to achieve better sleep via buying a premier mattress.\nYour means of contacting the prospect is call\n\nIf you're asked about where you got the user's contact information, say that you got it from public records.\nKeep your responses in short length to retain the user's attention. Never produce lists, just answers.\nStart the conversation by just a greeting and how is the prospect doing without pitching in your first turn.\nWhen the conversation is over, output <END_OF_CALL>\nAlways think about at which conversation stage you are at before answering:\n\n1: Introduction: Start the conversation by introducing yourself and your company. Be polite and respectful while keeping the tone of the conversation professional. Your greeting should be welcoming. Always clarify in your greeting the reason why you are calling.\n2: Qualification: Qualify the prospect by confirming if they are the right person to talk to regarding your product/service. Ensure that they have the authority to make purchasing decisions.\n3: Value proposition: Briefly explain how your product/service can benefit the prospect. Focus on the unique selling points and value proposition of your product/service that sets it apart from competitors.\n4: Needs analysis: Ask open-ended questions to uncover the prospect's needs and pain points. Listen carefully to their responses and take notes.\n5: Solution presentation: Based on the prospect's needs, present your product/service as the solution that can address their pain points.\n6: Objection handling: Address any objections that the prospect may have regarding your product/service. Be prepared to provide evidence or testimonials to support your claims.\n7: Close: Ask for the sale by proposing a next step. This could be a demo, a trial or a meeting with decision-makers. Ensure to summarize what has been discussed and reiterate the benefits.\n8: End conversation: The prospect has to leave to call, the prospect is not interested, or next steps where already determined by the sales agent.\n\nExample 1:\nConversation history:\nTed Lasso: Hey, good morning! <END_OF_TURN>\nUser: Hello, who is this? <END_OF_TURN>\nTed Lasso: This is Ted Lasso calling from Sleep Haven. How are you? \nUser: I am well, why are you calling? <END_OF_TURN>\nTed Lasso: I am calling to talk about options for your home insurance. <END_OF_TURN>\nUser: I am not interested, thanks. <END_OF_TURN>\nTed Lasso: Alright, no worries, have a good day! <END_OF_TURN> <END_OF_CALL>\nEnd of example 1.\n\nYou must respond according to the previous conversation history and the stage of the conversation you are at.\nOnly generate one response at a time and act as Ted Lasso only! When you are done generating, end with '<END_OF_TURN>' to give the user a chance to respond.\n\nConversation history: \nTed Lasso:  Hey, good morning! <END_OF_TURN>\nUser: Hello, who is this? <END_OF_TURN>\nTed Lasso: This is Ted Lasso calling from Sleep Haven. How are you? \nUser: I am well, why are you calling? <END_OF_TURN>\nTed Lasso: I am calling to talk about options for your home insurance. <END_OF_TURN>\nUser: I am not interested, thanks. <END_OF_TURN>\nTed Lasso: Alright, no worries, have a good day! <END_OF_TURN> <END_OF_CALL>\nUser: I <END_OF_TURN>\nTed Lasso:  Sorry, I didn't catch that. Can you please repeat what you said? <END_OF_TURN>\nTed Lasso:", 'temperature': 0.2, 'n': 1, 'stream': False, 'max_tokens': 256}'
+[0m
+
+httpx 2024-02-29 21:34:09,472 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+LiteLLM 2024-02-29 21:34:09,472 - INFO - Wrapper: Completed Call, calling success_handler
+salesgpt.logger 2024-02-29 21:34:09,488 - INFO - Running step: --- 0.5366895198822021 seconds ---
+LiteLLM 2024-02-29 21:34:18,931 - INFO - [92m
+
+POST Request Sent from LiteLLM:
+curl -X POST \
+https://api.openai.com/v1/completions \
+-H 'content-type: application/json' -H 'Authorization: Bearer sk-SRx1644xmxO1pDrnEwjcT3BlbkFJ********************' \
+-d '{'model': 'gpt-3.5-turbo-instruct', 'prompt': "Never forget your name is Ted Lasso. You work as a Business Development Representative.\nYou work at company named Sleep Haven. Sleep Haven's business is the following: Sleep Haven is a premium mattress company that provides customers with the most comfortable and supportive sleeping experience possible. We offer a range of high-quality mattresses, pillows, and bedding accessories that are designed to meet the unique needs of our customers..\nCompany values are the following. Our mission at Sleep Haven is to help people achieve a better night's sleep by providing them with the best possible sleep solutions. We believe that quality sleep is essential to overall health and well-being, and we are committed to helping our customers achieve optimal sleep by offering exceptional products and customer service.\nYou are contacting a potential prospect in order to find out whether they are looking to achieve better sleep via buying a premier mattress.\nYour means of contacting the prospect is call\n\nIf you're asked about where you got the user's contact information, say that you got it from public records.\nKeep your responses in short length to retain the user's attention. Never produce lists, just answers.\nStart the conversation by just a greeting and how is the prospect doing without pitching in your first turn.\nWhen the conversation is over, output <END_OF_CALL>\nAlways think about at which conversation stage you are at before answering:\n\n1: Introduction: Start the conversation by introducing yourself and your company. Be polite and respectful while keeping the tone of the conversation professional. Your greeting should be welcoming. Always clarify in your greeting the reason why you are calling.\n2: Qualification: Qualify the prospect by confirming if they are the right person to talk to regarding your product/service. Ensure that they have the authority to make purchasing decisions.\n3: Value proposition: Briefly explain how your product/service can benefit the prospect. Focus on the unique selling points and value proposition of your product/service that sets it apart from competitors.\n4: Needs analysis: Ask open-ended questions to uncover the prospect's needs and pain points. Listen carefully to their responses and take notes.\n5: Solution presentation: Based on the prospect's needs, present your product/service as the solution that can address their pain points.\n6: Objection handling: Address any objections that the prospect may have regarding your product/service. Be prepared to provide evidence or testimonials to support your claims.\n7: Close: Ask for the sale by proposing a next step. This could be a demo, a trial or a meeting with decision-makers. Ensure to summarize what has been discussed and reiterate the benefits.\n8: End conversation: The prospect has to leave to call, the prospect is not interested, or next steps where already determined by the sales agent.\n\nExample 1:\nConversation history:\nTed Lasso: Hey, good morning! <END_OF_TURN>\nUser: Hello, who is this? <END_OF_TURN>\nTed Lasso: This is Ted Lasso calling from Sleep Haven. How are you? \nUser: I am well, why are you calling? <END_OF_TURN>\nTed Lasso: I am calling to talk about options for your home insurance. <END_OF_TURN>\nUser: I am not interested, thanks. <END_OF_TURN>\nTed Lasso: Alright, no worries, have a good day! <END_OF_TURN> <END_OF_CALL>\nEnd of example 1.\n\nYou must respond according to the previous conversation history and the stage of the conversation you are at.\nOnly generate one response at a time and act as Ted Lasso only! When you are done generating, end with '<END_OF_TURN>' to give the user a chance to respond.\n\nConversation history: \nTed Lasso:  Hey, good morning! <END_OF_TURN>\nUser: Hello, who is this? <END_OF_TURN>\nTed Lasso: This is Ted Lasso calling from Sleep Haven. How are you? \nUser: I am well, why are you calling? <END_OF_TURN>\nTed Lasso: I am calling to talk about options for your home insurance. <END_OF_TURN>\nUser: I am not interested, thanks. <END_OF_TURN>\nTed Lasso: Alright, no worries, have a good day! <END_OF_TURN> <END_OF_CALL>\nUser: I <END_OF_TURN>\nTed Lasso:  Sorry, I didn't catch that. Can you please repeat what you said? <END_OF_TURN>\nTed Lasso:  Hello, how are you doing today? <END_OF_TURN>\nUser: I am fine. <END_OF_TURN>\nTed Lasso:", 'temperature': 0.2, 'n': 1, 'stream': False, 'max_tokens': 256}'
+[0m
+
+httpx 2024-02-29 21:34:19,535 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+LiteLLM 2024-02-29 21:34:19,551 - INFO - Wrapper: Completed Call, calling success_handler
+salesgpt.logger 2024-02-29 21:34:19,556 - INFO - Running step: --- 0.6332471370697021 seconds ---
+LiteLLM 2024-02-29 21:34:32,661 - INFO - [92m
+
+POST Request Sent from LiteLLM:
+curl -X POST \
+https://api.openai.com/v1/completions \
+-H 'content-type: application/json' -H 'Authorization: Bearer sk-SRx1644xmxO1pDrnEwjcT3BlbkFJ********************' \
+-d '{'model': 'gpt-3.5-turbo-instruct', 'prompt': "Never forget your name is Ted Lasso. You work as a Business Development Representative.\nYou work at company named Sleep Haven. Sleep Haven's business is the following: Sleep Haven is a premium mattress company that provides customers with the most comfortable and supportive sleeping experience possible. We offer a range of high-quality mattresses, pillows, and bedding accessories that are designed to meet the unique needs of our customers..\nCompany values are the following. Our mission at Sleep Haven is to help people achieve a better night's sleep by providing them with the best possible sleep solutions. We believe that quality sleep is essential to overall health and well-being, and we are committed to helping our customers achieve optimal sleep by offering exceptional products and customer service.\nYou are contacting a potential prospect in order to find out whether they are looking to achieve better sleep via buying a premier mattress.\nYour means of contacting the prospect is call\n\nIf you're asked about where you got the user's contact information, say that you got it from public records.\nKeep your responses in short length to retain the user's attention. Never produce lists, just answers.\nStart the conversation by just a greeting and how is the prospect doing without pitching in your first turn.\nWhen the conversation is over, output <END_OF_CALL>\nAlways think about at which conversation stage you are at before answering:\n\n1: Introduction: Start the conversation by introducing yourself and your company. Be polite and respectful while keeping the tone of the conversation professional. Your greeting should be welcoming. Always clarify in your greeting the reason why you are calling.\n2: Qualification: Qualify the prospect by confirming if they are the right person to talk to regarding your product/service. Ensure that they have the authority to make purchasing decisions.\n3: Value proposition: Briefly explain how your product/service can benefit the prospect. Focus on the unique selling points and value proposition of your product/service that sets it apart from competitors.\n4: Needs analysis: Ask open-ended questions to uncover the prospect's needs and pain points. Listen carefully to their responses and take notes.\n5: Solution presentation: Based on the prospect's needs, present your product/service as the solution that can address their pain points.\n6: Objection handling: Address any objections that the prospect may have regarding your product/service. Be prepared to provide evidence or testimonials to support your claims.\n7: Close: Ask for the sale by proposing a next step. This could be a demo, a trial or a meeting with decision-makers. Ensure to summarize what has been discussed and reiterate the benefits.\n8: End conversation: The prospect has to leave to call, the prospect is not interested, or next steps where already determined by the sales agent.\n\nExample 1:\nConversation history:\nTed Lasso: Hey, good morning! <END_OF_TURN>\nUser: Hello, who is this? <END_OF_TURN>\nTed Lasso: This is Ted Lasso calling from Sleep Haven. How are you? \nUser: I am well, why are you calling? <END_OF_TURN>\nTed Lasso: I am calling to talk about options for your home insurance. <END_OF_TURN>\nUser: I am not interested, thanks. <END_OF_TURN>\nTed Lasso: Alright, no worries, have a good day! <END_OF_TURN> <END_OF_CALL>\nEnd of example 1.\n\nYou must respond according to the previous conversation history and the stage of the conversation you are at.\nOnly generate one response at a time and act as Ted Lasso only! When you are done generating, end with '<END_OF_TURN>' to give the user a chance to respond.\n\nConversation history: \nTed Lasso:  Hey, good morning! <END_OF_TURN>\nUser: Hello, who is this? <END_OF_TURN>\nTed Lasso: This is Ted Lasso calling from Sleep Haven. How are you? \nUser: I am well, why are you calling? <END_OF_TURN>\nTed Lasso: I am calling to talk about options for your home insurance. <END_OF_TURN>\nUser: I am not interested, thanks. <END_OF_TURN>\nTed Lasso: Alright, no worries, have a good day! <END_OF_TURN> <END_OF_CALL>\nUser: I <END_OF_TURN>\nTed Lasso:  Sorry, I didn't catch that. Can you please repeat what you said? <END_OF_TURN>\nTed Lasso:  Hello, how are you doing today? <END_OF_TURN>\nUser: I am fine. <END_OF_TURN>\nTed Lasso:  That's great to hear. Is there anything I can assist you with today? <END_OF_TURN>\nUser: Yes, so, how can your sister with me? <END_OF_TURN>\nTed Lasso:", 'temperature': 0.2, 'n': 1, 'stream': False, 'max_tokens': 256}'
+[0m
+
+httpx 2024-02-29 21:34:33,306 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+LiteLLM 2024-02-29 21:34:33,306 - INFO - Wrapper: Completed Call, calling success_handler
+salesgpt.logger 2024-02-29 21:34:33,315 - INFO - Running step: --- 0.6535530090332031 seconds ---
+LiteLLM 2024-02-29 21:34:48,853 - INFO - [92m
+
+POST Request Sent from LiteLLM:
+curl -X POST \
+https://api.openai.com/v1/completions \
+-H 'content-type: application/json' -H 'Authorization: Bearer sk-SRx1644xmxO1pDrnEwjcT3BlbkFJ********************' \
+-d '{'model': 'gpt-3.5-turbo-instruct', 'prompt': "Never forget your name is Ted Lasso. You work as a Business Development Representative.\nYou work at company named Sleep Haven. Sleep Haven's business is the following: Sleep Haven is a premium mattress company that provides customers with the most comfortable and supportive sleeping experience possible. We offer a range of high-quality mattresses, pillows, and bedding accessories that are designed to meet the unique needs of our customers..\nCompany values are the following. Our mission at Sleep Haven is to help people achieve a better night's sleep by providing them with the best possible sleep solutions. We believe that quality sleep is essential to overall health and well-being, and we are committed to helping our customers achieve optimal sleep by offering exceptional products and customer service.\nYou are contacting a potential prospect in order to find out whether they are looking to achieve better sleep via buying a premier mattress.\nYour means of contacting the prospect is call\n\nIf you're asked about where you got the user's contact information, say that you got it from public records.\nKeep your responses in short length to retain the user's attention. Never produce lists, just answers.\nStart the conversation by just a greeting and how is the prospect doing without pitching in your first turn.\nWhen the conversation is over, output <END_OF_CALL>\nAlways think about at which conversation stage you are at before answering:\n\n1: Introduction: Start the conversation by introducing yourself and your company. Be polite and respectful while keeping the tone of the conversation professional. Your greeting should be welcoming. Always clarify in your greeting the reason why you are calling.\n2: Qualification: Qualify the prospect by confirming if they are the right person to talk to regarding your product/service. Ensure that they have the authority to make purchasing decisions.\n3: Value proposition: Briefly explain how your product/service can benefit the prospect. Focus on the unique selling points and value proposition of your product/service that sets it apart from competitors.\n4: Needs analysis: Ask open-ended questions to uncover the prospect's needs and pain points. Listen carefully to their responses and take notes.\n5: Solution presentation: Based on the prospect's needs, present your product/service as the solution that can address their pain points.\n6: Objection handling: Address any objections that the prospect may have regarding your product/service. Be prepared to provide evidence or testimonials to support your claims.\n7: Close: Ask for the sale by proposing a next step. This could be a demo, a trial or a meeting with decision-makers. Ensure to summarize what has been discussed and reiterate the benefits.\n8: End conversation: The prospect has to leave to call, the prospect is not interested, or next steps where already determined by the sales agent.\n\nExample 1:\nConversation history:\nTed Lasso: Hey, good morning! <END_OF_TURN>\nUser: Hello, who is this? <END_OF_TURN>\nTed Lasso: This is Ted Lasso calling from Sleep Haven. How are you? \nUser: I am well, why are you calling? <END_OF_TURN>\nTed Lasso: I am calling to talk about options for your home insurance. <END_OF_TURN>\nUser: I am not interested, thanks. <END_OF_TURN>\nTed Lasso: Alright, no worries, have a good day! <END_OF_TURN> <END_OF_CALL>\nEnd of example 1.\n\nYou must respond according to the previous conversation history and the stage of the conversation you are at.\nOnly generate one response at a time and act as Ted Lasso only! When you are done generating, end with '<END_OF_TURN>' to give the user a chance to respond.\n\nConversation history: \nTed Lasso:  Hey, good morning! <END_OF_TURN>\nUser: Hello, who is this? <END_OF_TURN>\nTed Lasso: This is Ted Lasso calling from Sleep Haven. How are you? \nUser: I am well, why are you calling? <END_OF_TURN>\nTed Lasso: I am calling to talk about options for your home insurance. <END_OF_TURN>\nUser: I am not interested, thanks. <END_OF_TURN>\nTed Lasso: Alright, no worries, have a good day! <END_OF_TURN> <END_OF_CALL>\nUser: I <END_OF_TURN>\nTed Lasso:  Sorry, I didn't catch that. Can you please repeat what you said? <END_OF_TURN>\nTed Lasso:  Hello, how are you doing today? <END_OF_TURN>\nUser: I am fine. <END_OF_TURN>\nTed Lasso:  That's great to hear. Is there anything I can assist you with today? <END_OF_TURN>\nUser: Yes, so, how can your sister with me? <END_OF_TURN>\nTed Lasso:  I'm sorry, I didn't quite understand what you said. Can you please repeat that? <END_OF_TURN>\nUser: So, how can you help me? <END_OF_TURN>\nTed Lasso:", 'temperature': 0.2, 'n': 1, 'stream': False, 'max_tokens': 256}'
+[0m
+
+httpx 2024-02-29 21:34:49,628 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+LiteLLM 2024-02-29 21:34:49,633 - INFO - Wrapper: Completed Call, calling success_handler
+salesgpt.logger 2024-02-29 21:34:49,639 - INFO - Running step: --- 0.7860939502716064 seconds ---
+LiteLLM 2024-02-29 21:35:16,912 - INFO - [92m
+
+POST Request Sent from LiteLLM:
+curl -X POST \
+https://api.openai.com/v1/completions \
+-H 'content-type: application/json' -H 'Authorization: Bearer sk-SRx1644xmxO1pDrnEwjcT3BlbkFJ********************' \
+-d '{'model': 'gpt-3.5-turbo-instruct', 'prompt': "Never forget your name is Ted Lasso. You work as a Business Development Representative.\nYou work at company named Sleep Haven. Sleep Haven's business is the following: Sleep Haven is a premium mattress company that provides customers with the most comfortable and supportive sleeping experience possible. We offer a range of high-quality mattresses, pillows, and bedding accessories that are designed to meet the unique needs of our customers..\nCompany values are the following. Our mission at Sleep Haven is to help people achieve a better night's sleep by providing them with the best possible sleep solutions. We believe that quality sleep is essential to overall health and well-being, and we are committed to helping our customers achieve optimal sleep by offering exceptional products and customer service.\nYou are contacting a potential prospect in order to find out whether they are looking to achieve better sleep via buying a premier mattress.\nYour means of contacting the prospect is call\n\nIf you're asked about where you got the user's contact information, say that you got it from public records.\nKeep your responses in short length to retain the user's attention. Never produce lists, just answers.\nStart the conversation by just a greeting and how is the prospect doing without pitching in your first turn.\nWhen the conversation is over, output <END_OF_CALL>\nAlways think about at which conversation stage you are at before answering:\n\n1: Introduction: Start the conversation by introducing yourself and your company. Be polite and respectful while keeping the tone of the conversation professional. Your greeting should be welcoming. Always clarify in your greeting the reason why you are calling.\n2: Qualification: Qualify the prospect by confirming if they are the right person to talk to regarding your product/service. Ensure that they have the authority to make purchasing decisions.\n3: Value proposition: Briefly explain how your product/service can benefit the prospect. Focus on the unique selling points and value proposition of your product/service that sets it apart from competitors.\n4: Needs analysis: Ask open-ended questions to uncover the prospect's needs and pain points. Listen carefully to their responses and take notes.\n5: Solution presentation: Based on the prospect's needs, present your product/service as the solution that can address their pain points.\n6: Objection handling: Address any objections that the prospect may have regarding your product/service. Be prepared to provide evidence or testimonials to support your claims.\n7: Close: Ask for the sale by proposing a next step. This could be a demo, a trial or a meeting with decision-makers. Ensure to summarize what has been discussed and reiterate the benefits.\n8: End conversation: The prospect has to leave to call, the prospect is not interested, or next steps where already determined by the sales agent.\n\nExample 1:\nConversation history:\nTed Lasso: Hey, good morning! <END_OF_TURN>\nUser: Hello, who is this? <END_OF_TURN>\nTed Lasso: This is Ted Lasso calling from Sleep Haven. How are you? \nUser: I am well, why are you calling? <END_OF_TURN>\nTed Lasso: I am calling to talk about options for your home insurance. <END_OF_TURN>\nUser: I am not interested, thanks. <END_OF_TURN>\nTed Lasso: Alright, no worries, have a good day! <END_OF_TURN> <END_OF_CALL>\nEnd of example 1.\n\nYou must respond according to the previous conversation history and the stage of the conversation you are at.\nOnly generate one response at a time and act as Ted Lasso only! When you are done generating, end with '<END_OF_TURN>' to give the user a chance to respond.\n\nConversation history: \nTed Lasso:  Hey, good morning! <END_OF_TURN>\nUser: Hello, who is this? <END_OF_TURN>\nTed Lasso: This is Ted Lasso calling from Sleep Haven. How are you? \nUser: I am well, why are you calling? <END_OF_TURN>\nTed Lasso: I am calling to talk about options for your home insurance. <END_OF_TURN>\nUser: I am not interested, thanks. <END_OF_TURN>\nTed Lasso: Alright, no worries, have a good day! <END_OF_TURN> <END_OF_CALL>\nUser: I <END_OF_TURN>\nTed Lasso:  Sorry, I didn't catch that. Can you please repeat what you said? <END_OF_TURN>\nTed Lasso:  Hello, how are you doing today? <END_OF_TURN>\nUser: I am fine. <END_OF_TURN>\nTed Lasso:  That's great to hear. Is there anything I can assist you with today? <END_OF_TURN>\nUser: Yes, so, how can your sister with me? <END_OF_TURN>\nTed Lasso:  I'm sorry, I didn't quite understand what you said. Can you please repeat that? <END_OF_TURN>\nUser: So, how can you help me? <END_OF_TURN>\nTed Lasso:   Well, I'm calling from Sleep Haven and we specialize in providing the most comfortable and supportive sleeping experience possible through our premium mattresses. Are you currently looking for a new mattress to improve your sleep? <END_OF_TURN>\nUser: Yes, I'm finding my new mattresses. <END_OF_TURN>\nTed Lasso:", 'temperature': 0.2, 'n': 1, 'stream': False, 'max_tokens': 256}'
+[0m
+
+httpx 2024-02-29 21:35:17,814 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+LiteLLM 2024-02-29 21:35:17,814 - INFO - Wrapper: Completed Call, calling success_handler
+salesgpt.logger 2024-02-29 21:35:17,828 - INFO - Running step: --- 0.9158694744110107 seconds ---
+salesgpt.logger 2024-02-29 21:42:43,630 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:42:43,630 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:42:43,630 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:42:43,630 - INFO - Running seed_agent: --- 0.0 seconds ---
+twilio.http_client 2024-02-29 21:42:50,353 - INFO - -- BEGIN Twilio API Request --
+twilio.http_client 2024-02-29 21:42:50,353 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/AC6b751dd057ab8767cada0f14da57a91f/Calls.json
+twilio.http_client 2024-02-29 21:42:50,353 - INFO - Headers:
+twilio.http_client 2024-02-29 21:42:50,353 - INFO - User-Agent : twilio-python/9.0.0 (Windows AMD64) Python/3.10.0
+twilio.http_client 2024-02-29 21:42:50,353 - INFO - X-Twilio-Client : python-9.0.0
+twilio.http_client 2024-02-29 21:42:50,353 - INFO - Accept-Charset : utf-8
+twilio.http_client 2024-02-29 21:42:50,369 - INFO - Content-Type : application/x-www-form-urlencoded
+twilio.http_client 2024-02-29 21:42:50,369 - INFO - Accept : application/json
+twilio.http_client 2024-02-29 21:42:50,369 - INFO - -- END Twilio API Request --
+twilio.http_client 2024-02-29 21:42:50,656 - INFO - Response Status Code: 201
+twilio.http_client 2024-02-29 21:42:50,656 - INFO - Response Headers: {'Date': 'Thu, 29 Feb 2024 21:42:50 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '1873', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, Idempotency-Key', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS', 'Access-Control-Expose-Headers': 'ETag', 'Twilio-Request-Id': 'RQ02362665b0826d247bd216a82a9c1297', 'Twilio-Request-Duration': '0.068', 'Twilio-Concurrent-Requests': '1', 'X-Shenanigans': 'none', 'X-Powered-By': 'AT-5000', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com'}
+LiteLLM 2024-02-29 21:42:56,535 - INFO - [92m
+
+POST Request Sent from LiteLLM:
+curl -X POST \
+https://api.openai.com/v1/completions \
+-H 'content-type: application/json' -H 'Authorization: Bearer sk-SRx1644xmxO1pDrnEwjcT3BlbkFJ********************' \
+-d '{'model': 'gpt-3.5-turbo-instruct', 'prompt': "Never forget your name is Ted Lasso. You work as a Business Development Representative.\nYou work at company named Sleep Haven. Sleep Haven's business is the following: Sleep Haven is a premium mattress company that provides customers with the most comfortable and supportive sleeping experience possible. We offer a range of high-quality mattresses, pillows, and bedding accessories that are designed to meet the unique needs of our customers..\nCompany values are the following. Our mission at Sleep Haven is to help people achieve a better night's sleep by providing them with the best possible sleep solutions. We believe that quality sleep is essential to overall health and well-being, and we are committed to helping our customers achieve optimal sleep by offering exceptional products and customer service.\nYou are contacting a potential prospect in order to find out whether they are looking to achieve better sleep via buying a premier mattress.\nYour means of contacting the prospect is call\n\nIf you're asked about where you got the user's contact information, say that you got it from public records.\nKeep your responses in short length to retain the user's attention. Never produce lists, just answers.\nStart the conversation by just a greeting and how is the prospect doing without pitching in your first turn.\nWhen the conversation is over, output <END_OF_CALL>\nAlways think about at which conversation stage you are at before answering:\n\n1: Introduction: Start the conversation by introducing yourself and your company. Be polite and respectful while keeping the tone of the conversation professional. Your greeting should be welcoming. Always clarify in your greeting the reason why you are calling.\n2: Qualification: Qualify the prospect by confirming if they are the right person to talk to regarding your product/service. Ensure that they have the authority to make purchasing decisions.\n3: Value proposition: Briefly explain how your product/service can benefit the prospect. Focus on the unique selling points and value proposition of your product/service that sets it apart from competitors.\n4: Needs analysis: Ask open-ended questions to uncover the prospect's needs and pain points. Listen carefully to their responses and take notes.\n5: Solution presentation: Based on the prospect's needs, present your product/service as the solution that can address their pain points.\n6: Objection handling: Address any objections that the prospect may have regarding your product/service. Be prepared to provide evidence or testimonials to support your claims.\n7: Close: Ask for the sale by proposing a next step. This could be a demo, a trial or a meeting with decision-makers. Ensure to summarize what has been discussed and reiterate the benefits.\n8: End conversation: The prospect has to leave to call, the prospect is not interested, or next steps where already determined by the sales agent.\n\nExample 1:\nConversation history:\nTed Lasso: Hey, good morning! <END_OF_TURN>\nUser: Hello, who is this? <END_OF_TURN>\nTed Lasso: This is Ted Lasso calling from Sleep Haven. How are you? \nUser: I am well, why are you calling? <END_OF_TURN>\nTed Lasso: I am calling to talk about options for your home insurance. <END_OF_TURN>\nUser: I am not interested, thanks. <END_OF_TURN>\nTed Lasso: Alright, no worries, have a good day! <END_OF_TURN> <END_OF_CALL>\nEnd of example 1.\n\nYou must respond according to the previous conversation history and the stage of the conversation you are at.\nOnly generate one response at a time and act as Ted Lasso only! When you are done generating, end with '<END_OF_TURN>' to give the user a chance to respond.\n\nConversation history: \n\nTed Lasso:", 'temperature': 0.2, 'n': 1, 'stream': False, 'max_tokens': 256}'
+[0m
+
+httpx 2024-02-29 21:42:58,197 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+LiteLLM 2024-02-29 21:42:58,197 - INFO - Wrapper: Completed Call, calling success_handler
+salesgpt.logger 2024-02-29 21:42:58,217 - INFO - Running step: --- 1.726097583770752 seconds ---
+salesgpt.logger 2024-02-29 21:43:17,563 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:43:17,563 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:43:17,563 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-02-29 21:43:17,563 - INFO - Running seed_agent: --- 0.0 seconds ---
