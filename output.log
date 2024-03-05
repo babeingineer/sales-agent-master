@@ -906,3 +906,59 @@ salesgpt.logger 2024-03-05 07:18:18,815 - INFO - Running from_llm: --- 0.0 secon
 salesgpt.logger 2024-03-05 07:18:18,816 - INFO - Running from_llm: --- 0.0 seconds ---
 salesgpt.logger 2024-03-05 07:18:18,817 - INFO - Running from_llm: --- 0.0019969940185546875 seconds ---
 salesgpt.logger 2024-03-05 07:18:18,817 - INFO - Running seed_agent: --- 0.0 seconds ---
+passlib.handlers.bcrypt 2024-03-05 07:18:22,868 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Lus\AppData\Local\Programs\Python\Python310\lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+salesgpt.logger 2024-03-05 07:40:43,875 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 07:40:43,877 - INFO - Running from_llm: --- 0.0009984970092773438 seconds ---
+salesgpt.logger 2024-03-05 07:40:43,877 - INFO - Running from_llm: --- 0.001995563507080078 seconds ---
+salesgpt.logger 2024-03-05 07:40:43,877 - INFO - Running seed_agent: --- 0.0 seconds ---
+passlib.handlers.bcrypt 2024-03-05 07:40:46,301 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Lus\AppData\Local\Programs\Python\Python310\lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+salesgpt.logger 2024-03-05 07:53:12,054 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 07:53:12,055 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 07:53:12,056 - INFO - Running from_llm: --- 0.002010822296142578 seconds ---
+salesgpt.logger 2024-03-05 07:53:12,056 - INFO - Running seed_agent: --- 0.0 seconds ---
+passlib.handlers.bcrypt 2024-03-05 07:53:17,889 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Lus\AppData\Local\Programs\Python\Python310\lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+salesgpt.logger 2024-03-05 08:28:31,664 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 08:28:31,665 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 08:28:31,666 - INFO - Running from_llm: --- 0.001971721649169922 seconds ---
+salesgpt.logger 2024-03-05 08:28:31,666 - INFO - Running seed_agent: --- 0.0 seconds ---
+passlib.handlers.bcrypt 2024-03-05 08:30:30,966 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Lus\AppData\Local\Programs\Python\Python310\lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+salesgpt.logger 2024-03-05 08:55:23,989 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 08:55:23,991 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 08:55:23,991 - INFO - Running from_llm: --- 0.0019769668579101562 seconds ---
+salesgpt.logger 2024-03-05 08:55:23,992 - INFO - Running seed_agent: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 08:56:09,089 - INFO - Running from_llm: --- 0.0009965896606445312 seconds ---
+salesgpt.logger 2024-03-05 08:56:09,090 - INFO - Running from_llm: --- 0.0010023117065429688 seconds ---
+salesgpt.logger 2024-03-05 08:56:09,091 - INFO - Running from_llm: --- 0.002992391586303711 seconds ---
+salesgpt.logger 2024-03-05 08:56:09,091 - INFO - Running seed_agent: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 09:17:10,688 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 09:17:10,689 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 09:17:10,689 - INFO - Running from_llm: --- 0.0016477108001708984 seconds ---
+salesgpt.logger 2024-03-05 09:17:10,689 - INFO - Running seed_agent: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 09:17:35,129 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 09:17:35,131 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 09:17:35,131 - INFO - Running from_llm: --- 0.0019953250885009766 seconds ---
+salesgpt.logger 2024-03-05 09:17:35,132 - INFO - Running seed_agent: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 10:30:48,534 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 10:30:48,535 - INFO - Running from_llm: --- 0.000997304916381836 seconds ---
+salesgpt.logger 2024-03-05 10:30:48,535 - INFO - Running from_llm: --- 0.000997304916381836 seconds ---
+salesgpt.logger 2024-03-05 10:30:48,536 - INFO - Running seed_agent: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 10:31:05,829 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 10:31:05,830 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 10:31:05,831 - INFO - Running from_llm: --- 0.0020084381103515625 seconds ---
+salesgpt.logger 2024-03-05 10:31:05,831 - INFO - Running seed_agent: --- 0.0 seconds ---

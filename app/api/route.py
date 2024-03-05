@@ -96,10 +96,13 @@ class UserPayload(BaseModel):
 
 @router.post("/signup")
 async def user_signup(payload:UserPayload, db: Session = Depends(get_db)):
-    user = User(email=payload.email, password=get_password_hash(payload.password))
-    db.add(user)
-    db.commit()
-    return 100
+    try:
+        user = User(email=payload.email, password=get_password_hash(payload.password))
+        db.add(user)
+        db.commit()
+        return "Success"
+    except:
+        raise HTTPException(status_code=400, detail="Same Email or Database Error")
 
 @router.post("/signin")
 async def user_signin(payload:UserPayload, db: Session = Depends(get_db)):
@@ -123,45 +126,39 @@ class CampaignCreate(BaseModel):
     conversation_type: str
     use_custom_prompt: str
     custom_prompt: str
+    twilio_sid: str
+    twilio_token: str
+    twilio_number: str
 
-@router.post("/{user_id}/campaign")
-def create_campaign(user_id:int, payload: CampaignCreate, db: Session = Depends(get_db)):
+@router.post("/campaign")
+def create_campaign(user: Annotated[User, Depends(get_current_user)], payload: CampaignCreate, db: Session = Depends(get_db)):
     payload_obj = payload.model_dump()
-    campaign_name = payload_obj.pop("campaign_name")
-    data = json.dumps(payload_obj)
-    filename = str(uuid.uuid4()) + ".json"
-    file = open(filename, "w")
-    file.write(data)
-    file.close()
-    campaign = Campaign(user_id=user_id, name=campaign_name, filename=filename)
+    campaign = Campaign(user_id=user.id, **payload_obj)
     db.add(campaign)
     db.commit()
     return campaign
 
-@router.get("/{user_id}/campaign")
-def get_campaign(user_id:int, payload: CampaignCreate, db: Session = Depends(get_db)):
-    campaigns = db.query(Campaign).filter(Campaign.user_id == user_id).all()
+@router.get("/campaign")
+def get_campaign(user: Annotated[User, Depends(get_current_user)], db: Session = Depends(get_db)):
+    campaigns = db.query(Campaign).filter(Campaign.user_id == user.id).all()
     return campaigns
 
 
-################################## Contact #####################################
-
-
-
+##################################### Contact #####################################
 class ContactCreate(BaseModel):
     email: str
     phone_number: str
     name: str
 
 @router.post("/contact")
-def create_contact(payload: ContactCreate, campaign_id:str = Query(...), db: Session = Depends(get_db)):
+def create_contact(user: Annotated[User, Depends(get_current_user)], payload: ContactCreate, campaign_id:str = Query(...), db: Session = Depends(get_db)):
     contact = Contact(campaign_id = campaign_id, email=payload.email, phone_number = payload.phone_number, name = payload.name)
     db.add(contact)
     db.commit()
     return contact
 
 @router.get("/contact")
-def get_contact(campaign_id:str = Query(...), db: Session = Depends(get_db)):
+def get_contact(user: Annotated[User, Depends(get_current_user)], campaign_id:str = Query(...), db: Session = Depends(get_db)):
     contacts = db.query(Contact).filter(Contact.campaign_id == campaign_id).all()
     return contacts
 
@@ -170,7 +167,7 @@ def get_contact(campaign_id:str = Query(...), db: Session = Depends(get_db)):
 
 
 @router.get("/chat")
-async def chat():
+async def chat(user: Annotated[User, Depends(get_current_user)]):
     account_sid = 'AC6b751dd057ab8767cada0f14da57a91f'
     auth_token = '450967db305c89974961d2c31d1be726'
     twilio_number = '+12898156204'
@@ -191,6 +188,7 @@ llm = ChatLiteLLM(temperature=0.2, model_name="gpt-3.5-turbo-instruct")
 with open("69d32bcc-96d5-4b9f-b1f8-055d2be65337.json", "r", encoding="UTF-8") as f:
     print("config loaded")
     config = json.load(f)
+print(config)
 sales_agent = SalesGPT.from_llm(llm, **config)
 sales_agent.seed_agent()
 
