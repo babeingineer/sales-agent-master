@@ -1,7 +1,10 @@
 import json
 import uuid
-from fastapi import APIRouter, Depends, Query, Form, Response, Request
+from datetime import datetime, timedelta, timezone
+from fastapi import APIRouter, Depends, Query, Form, Response, Request, HTTPException, status
+from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from fastapi_sqlalchemy import db
+from passlib.context import CryptContext
 from app.db.models.user import User
 from app.db.models.campaign import Campaign
 from app.db.models.contact import Contact
@@ -9,11 +12,13 @@ from app.db.database import SessionLocal
 from sqlalchemy.orm import Session
 from pydantic import BaseModel
 from salesgpt.salesgptapi import SalesGPTAPI
-from typing import List
+from typing import List, Annotated
 from twilio.rest import Client
+from jose import JWTError, jwt
 from twilio.twiml.voice_response import VoiceResponse
 from langchain_community.chat_models import ChatLiteLLM
 from salesgpt.agents import SalesGPT
+
 
 router = APIRouter()
 
@@ -25,27 +30,86 @@ def get_db():
         db.close()
 
 
+################################## User #####################################
+
+SECRET_KEY = "4b8574baecf063d417c3ee348422ddd3e1b3120f33d742c63e3b1c1b17ce25c7"
+ALGORITHM = "HS256"
+ACCESS_TOKEN_EXPIRE_MINUTES = 30
+
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+
+def verify_password(plain_password, hashed_password):
+    return pwd_context.verify(plain_password, hashed_password)
+
+def get_password_hash(password):
+    return pwd_context.hash(password)
+
+def get_user(email: str, db):
+    try:
+        user = db.query(User).filter(User.email == email).one()
+        return user
+    except:
+        return None
+
+def authenticate_user(email: str, password: str, db):
+    user = get_user(email, db)
+
+    if not user:
+        return False
+    if not verify_password(password, user.password):
+        return False
+    return user
+
+def create_access_token(data: dict, expires_delta: timedelta | None = None):
+    to_encode = data.copy()
+    if expires_delta:
+        expire = datetime.now(timezone.utc) + expires_delta
+    else:
+        expire = datetime.now(timezone.utc) + timedelta(minutes=15)
+    to_encode.update({"exp": expire})
+    encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
+    return encoded_jwt
+
+async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
+    credentials_exception = HTTPException(
+        status_code=status.HTTP_401_UNAUTHORIZED,
+        detail="Could not validate credentials",
+        headers={"WWW-Authenticate": "Bearer"},
+    )
+    try:
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        username: str = payload.get("sub")
+        if username is None:
+            raise credentials_exception
+    except JWTError:
+        raise credentials_exception
+    user = get_user(username=username)
+    if user is None:
+        raise credentials_exception
+    return user
+
+
 class UserPayload(BaseModel):
     email: str
     password: str
 
 @router.post("/signup")
 async def user_signup(payload:UserPayload, db: Session = Depends(get_db)):
-    user = User(email=payload.email, password=payload.password)
+    user = User(email=payload.email, password=get_password_hash(payload.password))
     db.add(user)
     db.commit()
     return 100
 
 @router.post("/signin")
 async def user_signin(payload:UserPayload, db: Session = Depends(get_db)):
-    try:
-        user = db.query(User).filter(User.email == payload.email).one()
-        if user.password == payload.password:
-            return "Sucess"
-        return "Password Failed"
-    except:
-        return "No User"
+    user = authenticate_user(payload.email, payload.password, db)
+    if not user:
+        raise HTTPException(status_code=401, detail="Authentication Failed")
+    return create_access_token({"sub": user.email})
     
+
+################################## Campaign #####################################
 
 
 class CampaignCreate(BaseModel):
@@ -80,6 +144,9 @@ def get_campaign(user_id:int, payload: CampaignCreate, db: Session = Depends(get
     return campaigns
 
 
+################################## Contact #####################################
+
+
 
 class ContactCreate(BaseModel):
     email: str
@@ -97,6 +164,9 @@ def create_contact(payload: ContactCreate, campaign_id:str = Query(...), db: Ses
 def get_contact(campaign_id:str = Query(...), db: Session = Depends(get_db)):
     contacts = db.query(Contact).filter(Contact.campaign_id == campaign_id).all()
     return contacts
+
+
+################################## Chat #####################################
 
 
 @router.get("/chat")

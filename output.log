@@ -869,3 +869,40 @@ salesgpt.logger 2024-02-29 21:43:17,563 - INFO - Running from_llm: --- 0.0 secon
 salesgpt.logger 2024-02-29 21:43:17,563 - INFO - Running from_llm: --- 0.0 seconds ---
 salesgpt.logger 2024-02-29 21:43:17,563 - INFO - Running from_llm: --- 0.0 seconds ---
 salesgpt.logger 2024-02-29 21:43:17,563 - INFO - Running seed_agent: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 05:53:45,184 - INFO - Running from_llm: --- 0.0009982585906982422 seconds ---
+salesgpt.logger 2024-03-05 05:53:45,184 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 05:53:45,185 - INFO - Running from_llm: --- 0.001995563507080078 seconds ---
+salesgpt.logger 2024-03-05 05:53:45,185 - INFO - Running seed_agent: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 05:54:23,152 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 05:54:23,155 - INFO - Running from_llm: --- 0.0010113716125488281 seconds ---
+salesgpt.logger 2024-03-05 05:54:23,156 - INFO - Running from_llm: --- 0.003976345062255859 seconds ---
+salesgpt.logger 2024-03-05 05:54:23,156 - INFO - Running seed_agent: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 06:53:48,875 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 06:53:48,876 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 06:53:48,877 - INFO - Running from_llm: --- 0.001981973648071289 seconds ---
+salesgpt.logger 2024-03-05 06:53:48,879 - INFO - Running seed_agent: --- 0.0 seconds ---
+passlib.handlers.bcrypt 2024-03-05 06:58:11,297 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Lus\AppData\Local\Programs\Python\Python310\lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+salesgpt.logger 2024-03-05 07:02:02,614 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 07:02:02,615 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 07:02:02,616 - INFO - Running from_llm: --- 0.0019981861114501953 seconds ---
+salesgpt.logger 2024-03-05 07:02:02,616 - INFO - Running seed_agent: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 07:03:10,587 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 07:03:10,588 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 07:03:10,589 - INFO - Running from_llm: --- 0.001997709274291992 seconds ---
+salesgpt.logger 2024-03-05 07:03:10,589 - INFO - Running seed_agent: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 07:03:39,503 - INFO - Running from_llm: --- 0.0009987354278564453 seconds ---
+salesgpt.logger 2024-03-05 07:03:39,504 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 07:03:39,505 - INFO - Running from_llm: --- 0.002662181854248047 seconds ---
+salesgpt.logger 2024-03-05 07:03:39,506 - INFO - Running seed_agent: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 07:11:22,720 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 07:11:22,721 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 07:11:22,722 - INFO - Running from_llm: --- 0.001997232437133789 seconds ---
+salesgpt.logger 2024-03-05 07:11:22,722 - INFO - Running seed_agent: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 07:18:18,815 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 07:18:18,816 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 07:18:18,817 - INFO - Running from_llm: --- 0.0019969940185546875 seconds ---
+salesgpt.logger 2024-03-05 07:18:18,817 - INFO - Running seed_agent: --- 0.0 seconds ---
