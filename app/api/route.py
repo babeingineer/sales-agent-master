@@ -66,7 +66,7 @@ def create_access_token(data: dict, expires_delta: timedelta | None = None):
     if expires_delta:
         expire = datetime.now(timezone.utc) + expires_delta
     else:
-        expire = datetime.now(timezone.utc) + timedelta(minutes=15)
+        expire = datetime.now(timezone.utc) + timedelta(minutes=60)
     to_encode.update({"exp": expire})
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     return encoded_jwt
@@ -179,7 +179,7 @@ sales_agents:dict[str, SalesGPT] = {}
 # sales_agent.seed_agent()
 
 @router.get("/chat")
-async def chat(user: Annotated[User, Depends(get_current_user)], campaign_id:str = Query(...), contact_id:str = Query(...)):
+async def chat(user: Annotated[User, Depends(get_current_user)], campaign_id:str = Query(...), contact_id:str = Query(...), db:Session = Depends(get_db)):
     contact: Contact = db.query(Contact).filter(Contact.id == contact_id).one()
     campaign: Campaign = db.query(Campaign).filter(Campaign.id == campaign_id).one()
 

@@ -1024,3 +1024,43 @@ Traceback (most recent call last):
   File "C:\Users\Lus\AppData\Local\Programs\Python\Python310\lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
     version = _bcrypt.__about__.__version__
 AttributeError: module 'bcrypt' has no attribute '__about__'
+passlib.handlers.bcrypt 2024-03-05 14:55:15,857 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Lus\AppData\Local\Programs\Python\Python310\lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+salesgpt.logger 2024-03-05 15:09:48,774 - INFO - Running from_llm: --- 0.0009698867797851562 seconds ---
+salesgpt.logger 2024-03-05 15:09:48,775 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 15:09:48,776 - INFO - Running from_llm: --- 0.002655506134033203 seconds ---
+salesgpt.logger 2024-03-05 15:09:48,777 - INFO - Running seed_agent: --- 0.0 seconds ---
+twilio.http_client 2024-03-05 15:09:51,104 - INFO - -- BEGIN Twilio API Request --
+twilio.http_client 2024-03-05 15:09:51,105 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/AC6b751dd057ab8767cada0f14da57a91f/Calls.json
+twilio.http_client 2024-03-05 15:09:51,105 - INFO - Headers:
+twilio.http_client 2024-03-05 15:09:51,106 - INFO - User-Agent : twilio-python/9.0.0 (Windows AMD64) Python/3.10.0
+twilio.http_client 2024-03-05 15:09:51,106 - INFO - X-Twilio-Client : python-9.0.0
+twilio.http_client 2024-03-05 15:09:51,107 - INFO - Accept-Charset : utf-8
+twilio.http_client 2024-03-05 15:09:51,107 - INFO - Content-Type : application/x-www-form-urlencoded
+twilio.http_client 2024-03-05 15:09:51,108 - INFO - Accept : application/json
+twilio.http_client 2024-03-05 15:09:51,108 - INFO - -- END Twilio API Request --
+twilio.http_client 2024-03-05 15:09:53,156 - INFO - Response Status Code: 401
+twilio.http_client 2024-03-05 15:09:53,157 - INFO - Response Headers: {'Date': 'Tue, 05 Mar 2024 21:11:43 GMT', 'Content-Type': 'application/json', 'Content-Length': '107', 'Connection': 'keep-alive', 'Www-Authenticate': 'Basic realm="Twilio API"', 'Twilio-Request-Id': 'RQ73e462f5a95abe6c975f78591899c97c', 'X-Shenanigans': 'none', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, Idempotency-Key', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS', 'Access-Control-Expose-Headers': 'ETag', 'Access-Control-Allow-Credentials': 'true', 'X-Powered-By': 'AT-5000', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com'}
+passlib.handlers.bcrypt 2024-03-05 15:10:33,978 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Lus\AppData\Local\Programs\Python\Python310\lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+salesgpt.logger 2024-03-05 15:10:43,094 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 15:10:43,095 - INFO - Running from_llm: --- 0.0009982585906982422 seconds ---
+salesgpt.logger 2024-03-05 15:10:43,095 - INFO - Running from_llm: --- 0.0009982585906982422 seconds ---
+salesgpt.logger 2024-03-05 15:10:43,096 - INFO - Running seed_agent: --- 0.0 seconds ---
+twilio.http_client 2024-03-05 15:10:43,097 - INFO - -- BEGIN Twilio API Request --
+twilio.http_client 2024-03-05 15:10:43,097 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/AC6b751dd057ab8767cada0f14da57a91f/Calls.json
+twilio.http_client 2024-03-05 15:10:43,097 - INFO - Headers:
+twilio.http_client 2024-03-05 15:10:43,098 - INFO - User-Agent : twilio-python/9.0.0 (Windows AMD64) Python/3.10.0
+twilio.http_client 2024-03-05 15:10:43,098 - INFO - X-Twilio-Client : python-9.0.0
+twilio.http_client 2024-03-05 15:10:43,098 - INFO - Accept-Charset : utf-8
+twilio.http_client 2024-03-05 15:10:43,099 - INFO - Content-Type : application/x-www-form-urlencoded
+twilio.http_client 2024-03-05 15:10:43,099 - INFO - Accept : application/json
+twilio.http_client 2024-03-05 15:10:43,100 - INFO - -- END Twilio API Request --
+twilio.http_client 2024-03-05 15:10:44,064 - INFO - Response Status Code: 401
+twilio.http_client 2024-03-05 15:10:44,065 - INFO - Response Headers: {'Date': 'Tue, 05 Mar 2024 21:12:34 GMT', 'Content-Type': 'application/json', 'Content-Length': '107', 'Connection': 'keep-alive', 'Www-Authenticate': 'Basic realm="Twilio API"', 'Twilio-Request-Id': 'RQc4997b272741bd8f89f17aeaf5ea455b', 'X-Shenanigans': 'none', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, Idempotency-Key', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS', 'Access-Control-Expose-Headers': 'ETag', 'Access-Control-Allow-Credentials': 'true', 'X-Powered-By': 'AT-5000', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com'}
