@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, Boolean
 from app.db.database import Base
 
 class Campaign(Base):
@@ -13,6 +13,7 @@ class Campaign(Base):
     company_business = Column(String)
     company_values = Column(String)
     conversation_purpose = Column(String)
+    conversation_type=Column(String)
     use_custom_prompt = Column(String)
     custom_prompt = Column(String)
     twilio_sid = Column(String)

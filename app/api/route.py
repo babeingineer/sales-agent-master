@@ -71,7 +71,7 @@ def create_access_token(data: dict, expires_delta: timedelta | None = None):
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     return encoded_jwt
 
-async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
+async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)], db: Session = Depends(get_db)):
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
         detail="Could not validate credentials",
@@ -79,12 +79,12 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
     )
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-        username: str = payload.get("sub")
-        if username is None:
+        email: str = payload.get("sub")
+        if email is None:
             raise credentials_exception
     except JWTError:
         raise credentials_exception
-    user = get_user(username=username)
+    user = get_user(email, db)
     if user is None:
         raise credentials_exception
     return user
@@ -124,7 +124,7 @@ class CampaignCreate(BaseModel):
     company_values: str
     conversation_purpose: str
     conversation_type: str
-    use_custom_prompt: str
+    use_custom_prompt: bool
     custom_prompt: str
     twilio_sid: str
     twilio_token: str
@@ -138,10 +138,15 @@ def create_campaign(user: Annotated[User, Depends(get_current_user)], payload: C
     db.commit()
     return campaign
 
-@router.get("/campaign")
+@router.get("/campaigns")
 def get_campaign(user: Annotated[User, Depends(get_current_user)], db: Session = Depends(get_db)):
     campaigns = db.query(Campaign).filter(Campaign.user_id == user.id).all()
     return campaigns
+
+@router.get("/campaign/{campaign_id}")
+def get_campaign(user: Annotated[User, Depends(get_current_user)], campaign_id: int, db: Session = Depends(get_db)):
+    campaign = db.query(Campaign).filter(Campaign.id == campaign_id).one()
+    return campaign
 
 
 ##################################### Contact #####################################
@@ -157,26 +162,52 @@ def create_contact(user: Annotated[User, Depends(get_current_user)], payload: Co
     db.commit()
     return contact
 
-@router.get("/contact")
+@router.get("/contacts")
 def get_contact(user: Annotated[User, Depends(get_current_user)], campaign_id:str = Query(...), db: Session = Depends(get_db)):
     contacts = db.query(Contact).filter(Contact.campaign_id == campaign_id).all()
     return contacts
 
 
 ################################## Chat #####################################
-
+llm = ChatLiteLLM(temperature=0.2, model_name="gpt-3.5-turbo-instruct")
+sales_agents:dict[str, SalesGPT] = {}
+# with open("69d32bcc-96d5-4b9f-b1f8-055d2be65337.json", "r", encoding="UTF-8") as f:
+#     print("config loaded")
+#     config = json.load(f)
+# print(config)
+# sales_agent = SalesGPT.from_llm(llm, **config)
+# sales_agent.seed_agent()
 
 @router.get("/chat")
-async def chat(user: Annotated[User, Depends(get_current_user)]):
-    account_sid = 'AC6b751dd057ab8767cada0f14da57a91f'
-    auth_token = '450967db305c89974961d2c31d1be726'
-    twilio_number = '+12898156204'
-    recipient_number = '+13044609990'
+async def chat(user: Annotated[User, Depends(get_current_user)], campaign_id:str = Query(...), contact_id:str = Query(...)):
+    contact: Contact = db.query(Contact).filter(Contact.id == contact_id).one()
+    campaign: Campaign = db.query(Campaign).filter(Campaign.id == campaign_id).one()
+
+    account_sid = campaign.twilio_sid
+    auth_token = campaign.twilio_token
+    twilio_number = campaign.twilio_number
+    recipient_number = contact.phone_number
+
+    config = {}
+    config["salesperson_name"] = campaign.salesperson_name
+    config["salesperson_role"] = campaign.salesperson_role
+    config["company_name"] = campaign.company_name
+    config["company_business"] = campaign.company_business
+    config["company_values"] = campaign.company_values
+    config["conversation_purpose"] = campaign.conversation_purpose
+    config["conversation_type"] = campaign.conversation_type
+    config["use_custom_prompt"] = campaign.use_custom_prompt
+    config["custom_prompt"] = campaign.custom_prompt
+
+
+    id = uuid.uuid4()
+    sales_agents[id] = SalesGPT.from_llm(llm, **config)
+    sales_agents[id].seed_agent()
 
     # Initialize Twilio client
     client = Client(account_sid, auth_token)
     call = client.calls.create(
-        url="http://170.130.55.184:8001/twilio/voice",  # URL where Twilio should send the call flow
+        url=f"http://170.130.55.184:8001/twilio/voice?id={id}",  # URL where Twilio should send the call flow
         # url="http://demo.twilio.com/docs/voice.xml",  # URL where Twilio should send the call flow
         to=recipient_number,
         from_=twilio_number
@@ -184,16 +215,10 @@ async def chat(user: Annotated[User, Depends(get_current_user)]):
     return {"message": "Call initiated"}
 
 
-llm = ChatLiteLLM(temperature=0.2, model_name="gpt-3.5-turbo-instruct")
-with open("69d32bcc-96d5-4b9f-b1f8-055d2be65337.json", "r", encoding="UTF-8") as f:
-    print("config loaded")
-    config = json.load(f)
-print(config)
-sales_agent = SalesGPT.from_llm(llm, **config)
-sales_agent.seed_agent()
+
 
 @router.post("/twilio/voice")
-async def twilio_voice(request:Request):
+async def twilio_voice(request:Request, id:str = Query(...)):
     form_data = await request.form()
     SpeechResult = form_data.get("SpeechResult")
     # Get the data from the incoming Twilio request
@@ -201,15 +226,15 @@ async def twilio_voice(request:Request):
     # Create a TwiML response
     print(SpeechResult)
     if SpeechResult is not None:
-        sales_agent.human_step(SpeechResult)
+        sales_agents[id].human_step(SpeechResult)
         print(SpeechResult)
-    sales_agent.step()
+    sales_agents[id].step()
     response = VoiceResponse()
-    if len(sales_agent.conversation_history) == 0:
+    if len(sales_agents[id].conversation_history) == 0:
         response.say("hello")
     else:
         
-        text = sales_agent.conversation_history[-1]
+        text = sales_agents[id].conversation_history[-1]
         colon_index = text.index(':')
         end_index = text.index('<')
 
@@ -217,7 +242,7 @@ async def twilio_voice(request:Request):
         desired_text = text[colon_index + 2:end_index]
         print(desired_text)
         response.say(desired_text)
-    response.gather(input='speech', action='/twilio/voice', speech_timeout='auto')
+    response.gather(input='speech', action='/twilio/voice?id=id', speech_timeout='auto')
     # Return the TwiML response
     return Response(content=str(response), media_type="application/xml")
 

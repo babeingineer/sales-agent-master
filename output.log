@@ -962,3 +962,65 @@ salesgpt.logger 2024-03-05 10:31:05,829 - INFO - Running from_llm: --- 0.0 secon
 salesgpt.logger 2024-03-05 10:31:05,830 - INFO - Running from_llm: --- 0.0 seconds ---
 salesgpt.logger 2024-03-05 10:31:05,831 - INFO - Running from_llm: --- 0.0020084381103515625 seconds ---
 salesgpt.logger 2024-03-05 10:31:05,831 - INFO - Running seed_agent: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 10:33:33,347 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 10:33:33,348 - INFO - Running from_llm: --- 0.0009927749633789062 seconds ---
+salesgpt.logger 2024-03-05 10:33:33,348 - INFO - Running from_llm: --- 0.001984119415283203 seconds ---
+salesgpt.logger 2024-03-05 10:33:33,349 - INFO - Running seed_agent: --- 0.0 seconds ---
+passlib.handlers.bcrypt 2024-03-05 10:39:04,359 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Lus\AppData\Local\Programs\Python\Python310\lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+salesgpt.logger 2024-03-05 10:41:23,382 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 10:41:23,383 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 10:41:23,384 - INFO - Running from_llm: --- 0.0019948482513427734 seconds ---
+salesgpt.logger 2024-03-05 10:41:23,385 - INFO - Running seed_agent: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 10:42:21,066 - INFO - Running from_llm: --- 0.0009975433349609375 seconds ---
+salesgpt.logger 2024-03-05 10:42:21,067 - INFO - Running from_llm: --- 0.0009968280792236328 seconds ---
+salesgpt.logger 2024-03-05 10:42:21,067 - INFO - Running from_llm: --- 0.0019943714141845703 seconds ---
+salesgpt.logger 2024-03-05 10:42:21,068 - INFO - Running seed_agent: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 10:46:25,343 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 10:46:25,344 - INFO - Running from_llm: --- 0.0009968280792236328 seconds ---
+salesgpt.logger 2024-03-05 10:46:25,344 - INFO - Running from_llm: --- 0.0009968280792236328 seconds ---
+salesgpt.logger 2024-03-05 10:46:25,345 - INFO - Running seed_agent: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 10:47:38,688 - INFO - Running from_llm: --- 0.0009989738464355469 seconds ---
+salesgpt.logger 2024-03-05 10:47:38,689 - INFO - Running from_llm: --- 0.0009963512420654297 seconds ---
+salesgpt.logger 2024-03-05 10:47:38,690 - INFO - Running from_llm: --- 0.0029931068420410156 seconds ---
+salesgpt.logger 2024-03-05 10:47:38,691 - INFO - Running seed_agent: --- 0.0 seconds ---
+passlib.handlers.bcrypt 2024-03-05 10:48:37,598 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Lus\AppData\Local\Programs\Python\Python310\lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+salesgpt.logger 2024-03-05 10:56:16,508 - INFO - Running from_llm: --- 0.001007080078125 seconds ---
+salesgpt.logger 2024-03-05 10:56:16,509 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 10:56:16,510 - INFO - Running from_llm: --- 0.0029931068420410156 seconds ---
+salesgpt.logger 2024-03-05 10:56:16,510 - INFO - Running seed_agent: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 10:59:07,616 - INFO - Running from_llm: --- 0.0019996166229248047 seconds ---
+salesgpt.logger 2024-03-05 10:59:07,617 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 10:59:07,618 - INFO - Running from_llm: --- 0.003990650177001953 seconds ---
+salesgpt.logger 2024-03-05 10:59:07,619 - INFO - Running seed_agent: --- 0.0 seconds ---
+passlib.handlers.bcrypt 2024-03-05 11:07:52,589 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Lus\AppData\Local\Programs\Python\Python310\lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+salesgpt.logger 2024-03-05 11:20:31,693 - INFO - Running from_llm: --- 0.0 seconds ---
+salesgpt.logger 2024-03-05 11:20:31,694 - INFO - Running from_llm: --- 0.000997304916381836 seconds ---
+salesgpt.logger 2024-03-05 11:20:31,695 - INFO - Running from_llm: --- 0.0020012855529785156 seconds ---
+salesgpt.logger 2024-03-05 11:20:31,695 - INFO - Running seed_agent: --- 0.0 seconds ---
+passlib.handlers.bcrypt 2024-03-05 11:22:11,805 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Lus\AppData\Local\Programs\Python\Python310\lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+passlib.handlers.bcrypt 2024-03-05 12:20:34,209 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Lus\AppData\Local\Programs\Python\Python310\lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+passlib.handlers.bcrypt 2024-03-05 12:24:25,324 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Lus\AppData\Local\Programs\Python\Python310\lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
