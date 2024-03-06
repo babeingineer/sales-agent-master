@@ -6,6 +6,6 @@ class Contact(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     campaign_id = Column(Integer)
-    email = Column(String, unique=True, index=True)
-    phone_number = Column(String, unique=True, index=True)
+    email = Column(String, index=True)
+    phone_number = Column(String,  index=True)
     name = Column(String)

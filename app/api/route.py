@@ -200,9 +200,11 @@ async def chat(user: Annotated[User, Depends(get_current_user)], campaign_id:str
     config["custom_prompt"] = campaign.custom_prompt
 
 
-    id = uuid.uuid4()
+    id = str(uuid.uuid4())
     sales_agents[id] = SalesGPT.from_llm(llm, **config)
     sales_agents[id].seed_agent()
+    print("----------------------------------------------------------------")
+    print(sales_agents)
 
     # Initialize Twilio client
     client = Client(account_sid, auth_token)
@@ -242,7 +244,7 @@ async def twilio_voice(request:Request, id:str = Query(...)):
         desired_text = text[colon_index + 2:end_index]
         print(desired_text)
         response.say(desired_text)
-    response.gather(input='speech', action='/twilio/voice?id=id', speech_timeout='auto')
+    response.gather(input='speech', action=f'/twilio/voice?id={id}', speech_timeout='auto')
     # Return the TwiML response
     return Response(content=str(response), media_type="application/xml")
 
