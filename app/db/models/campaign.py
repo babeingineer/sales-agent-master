@@ -19,3 +19,4 @@ class Campaign(Base):
     twilio_sid = Column(String)
     twilio_token = Column(String)
     twilio_number = Column(String)
+    voice_id = Column(String)

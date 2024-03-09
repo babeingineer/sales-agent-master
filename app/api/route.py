@@ -2,6 +2,7 @@ import json
 import uuid
 from datetime import datetime, timedelta, timezone
 from fastapi import APIRouter, Depends, Query, Form, Response, Request, HTTPException, status
+import requests
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from fastapi_sqlalchemy import db
 from passlib.context import CryptContext
@@ -18,6 +19,7 @@ from jose import JWTError, jwt
 from twilio.twiml.voice_response import VoiceResponse
 from langchain_community.chat_models import ChatLiteLLM
 from salesgpt.agents import SalesGPT
+from urllib.parse import quote
 
 
 router = APIRouter()
@@ -129,6 +131,7 @@ class CampaignCreate(BaseModel):
     twilio_sid: str
     twilio_token: str
     twilio_number: str
+    voice_id: str
 
 @router.post("/campaign")
 def create_campaign(user: Annotated[User, Depends(get_current_user)], payload: CampaignCreate, db: Session = Depends(get_db)):
@@ -139,7 +142,7 @@ def create_campaign(user: Annotated[User, Depends(get_current_user)], payload: C
     return campaign
 
 @router.get("/campaigns")
-def get_campaign(user: Annotated[User, Depends(get_current_user)], db: Session = Depends(get_db)):
+def get_campaigns(user: Annotated[User, Depends(get_current_user)], db: Session = Depends(get_db)):
     campaigns = db.query(Campaign).filter(Campaign.user_id == user.id).all()
     return campaigns
 
@@ -159,6 +162,16 @@ class ContactCreate(BaseModel):
 def create_contact(user: Annotated[User, Depends(get_current_user)], payload: ContactCreate, campaign_id:str = Query(...), db: Session = Depends(get_db)):
     contact = Contact(campaign_id = campaign_id, email=payload.email, phone_number = payload.phone_number, name = payload.name)
     db.add(contact)
+    db.commit()
+    return contact
+
+@router.post("/contacts")
+def create_contacts(user: Annotated[User, Depends(get_current_user)], contacts: List[ContactCreate], campaign_id:str = Query(...), db: Session = Depends(get_db)):
+    _contacts = []
+    for contact in contacts:
+        _contacts.append(Contact(campaign_id=campaign_id, **contact.dict()))
+    
+    db.add_all(_contacts)
     db.commit()
     return contact
 
@@ -187,6 +200,7 @@ async def chat(user: Annotated[User, Depends(get_current_user)], campaign_id:str
     auth_token = campaign.twilio_token
     twilio_number = campaign.twilio_number
     recipient_number = contact.phone_number
+    voice_id = campaign.voice_id
 
     config = {}
     config["salesperson_name"] = campaign.salesperson_name
@@ -209,7 +223,7 @@ async def chat(user: Annotated[User, Depends(get_current_user)], campaign_id:str
     # Initialize Twilio client
     client = Client(account_sid, auth_token)
     call = client.calls.create(
-        url=f"http://170.130.55.184:8001/twilio/voice?id={id}",  # URL where Twilio should send the call flow
+        url=f"http://170.130.55.184:8001/twilio/voice?id={id}&voice_id={voice_id}",  # URL where Twilio should send the call flow
         # url="http://demo.twilio.com/docs/voice.xml",  # URL where Twilio should send the call flow
         to=recipient_number,
         from_=twilio_number
@@ -220,7 +234,7 @@ async def chat(user: Annotated[User, Depends(get_current_user)], campaign_id:str
 
 
 @router.post("/twilio/voice")
-async def twilio_voice(request:Request, id:str = Query(...)):
+async def twilio_voice(request:Request, id:str = Query(...), voice_id:str = Query(...)):
     form_data = await request.form()
     SpeechResult = form_data.get("SpeechResult")
     # Get the data from the incoming Twilio request
@@ -235,7 +249,6 @@ async def twilio_voice(request:Request, id:str = Query(...)):
     if len(sales_agents[id].conversation_history) == 0:
         response.say("hello")
     else:
-        
         text = sales_agents[id].conversation_history[-1]
         colon_index = text.index(':')
         end_index = text.index('<')
@@ -243,10 +256,28 @@ async def twilio_voice(request:Request, id:str = Query(...)):
         # Extract the text after ':' and before '<'
         desired_text = text[colon_index + 2:end_index]
         print(desired_text)
-        response.say(desired_text)
-    response.gather(input='speech', action=f'/twilio/voice?id={id}', speech_timeout='auto')
+        response.play(f"http://170.130.55.184:8001/elevenlabs?voiceid={voice_id}&text={quote(desired_text)}")
+    response.gather(input='speech', action=f'/twilio/voice?id={id}&voice_id={voice_id}', speech_timeout='auto')
     # Return the TwiML response
     return Response(content=str(response), media_type="application/xml")
+
+@router.get("/elevenlabs")
+async def elevenlabsvoice(voiceid:str = Query(...), text:str = Query(...)):
+    url = f"https://api.elevenlabs.io/v1/text-to-speech/{voiceid}"
+    payload = {
+        "text": text,
+        "voice_settings": {
+            "similarity_boost": 0.2,
+            "stability": 0.7
+        }
+    }
+    headers = {
+        "xi-api-key": "600a388199b21a84741147cdf9bf585f",
+        "Content-Type": "application/json"
+    }
+
+    response = requests.request("POST", url, json=payload, headers=headers)
+    return Response(content = response.content, media_type=response.headers['Content-Type'])
 
 
 
