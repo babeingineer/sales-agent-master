@@ -9,3 +9,4 @@ class Contact(Base):
     email = Column(String, index=True)
     phone_number = Column(String,  index=True)
     name = Column(String)
+    status = Column(String, default="none")

@@ -7,3 +7,5 @@ class User(Base):
     id = Column(Integer, primary_key=True, index=True)
     email = Column(String, unique=True, index=True)
     password = Column(String)
+    daily_limit = Column(Integer, default=20)
+    used = Column(Integer, default=0)
